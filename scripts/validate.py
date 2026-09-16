@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import re
 import struct
 import subprocess
 import sys
@@ -23,8 +24,10 @@ def fail(message: str) -> None:
 def main() -> int:
     try:
         manifest = json.loads((ROOT / "manifest.json").read_text(encoding="utf-8"))
-        if manifest.get("name") != "Ragnavik_Server" or manifest.get("version_number") != "1.0.12":
-            fail("manifest must describe published LostKode-Ragnavik_Server 1.0.12")
+        if manifest.get("name") != "Ragnavik_Server":
+            fail("manifest name must be Ragnavik_Server")
+        if not re.fullmatch(r"\d+\.\d+\.\d+", manifest.get("version_number", "")):
+            fail("manifest version_number must be semantic version x.y.z")
         dependencies = manifest.get("dependencies", [])
         if not dependencies or len(dependencies) != len(set(dependencies)):
             fail("manifest dependencies must be nonempty and unique")

@@ -1,5 +1,7 @@
 # Release process
 
+For releases that span UI, Progress, Server, or Client packages, follow [the coordinated release train](RELEASE_TRAINS.md).
+
 1. Update `manifest.json`, `CHANGELOG.md`, and the version description in `README.md`.
 2. Update `manifests/client-manifest.json` to the matching client release.
 3. Audit every effective client and server component in `manifests/anticheat-policy.json`. Shared packages remain exact-version dependencies. Every client-only plugin GUID belongs in the generated extra whitelist. Every genuinely server-only plugin GUID belongs in the generated server-only list.

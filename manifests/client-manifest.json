@@ -1,0 +1,21 @@
+{
+  "name": "Ragnavik",
+  "version_number": "1.1.12",
+  "dependencies": [
+    "LostKode-Ragnavik_Server-1.0.12",
+    "LostKode-Ragnavik_UI-1.0.2",
+    "Advize-PlantEasily-2.2.0",
+    "Azumatt-AAA_Crafting-2.1.8",
+    "ComfyMods-ComfyAutoRepair-1.1.0",
+    "virtuaCode-TrashItems-1.2.8",
+    "Azumatt-Build_Camera_Custom_Hammers_Edition-1.3.1",
+    "Azumatt-AzuClock-1.1.0",
+    "Azumatt-AzuAreaRepair-1.1.7",
+    "ComfyMods-Gizmo-1.16.0",
+    "Neobotics-HUDCompass-1.2.0",
+    "ComfyMods-Chatter-2.13.0",
+    "Azumatt-Unshamed-1.0.5",
+    "ComfyMods-Intermission-1.9.0",
+    "Azumatt-FastLink-1.4.8"
+  ]
+}

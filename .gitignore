@@ -1,0 +1,7 @@
+dist/
+*.zip
+__pycache__/
+*.pyc
+bin/
+obj/
+node_modules/

@@ -1,0 +1,35 @@
+{
+  "client_only": {
+    "LostKode-Ragnavik_UI": ["lostkode.ragnavik.ui"],
+    "Advize-PlantEasily": ["advize.PlantEasily"],
+    "Azumatt-AAA_Crafting": ["Azumatt.AzuAntiArthriticCrafting"],
+    "ComfyMods-ComfyAutoRepair": ["redseiko.valheim.comfyautorepair"],
+    "virtuaCode-TrashItems": ["virtuacode.valheim.trashitems"],
+    "Azumatt-Build_Camera_Custom_Hammers_Edition": ["Azumatt.BuildCameraCHE"],
+    "Azumatt-AzuClock": ["Azumatt.AzuClock"],
+    "Azumatt-AzuAreaRepair": ["Azumatt.AzuAreaRepair"],
+    "ComfyMods-Gizmo": ["bruce.valheim.comfymods.gizmo"],
+    "Neobotics-HUDCompass": ["neobotics.valheim_mod.hudcompass"],
+    "ComfyMods-Chatter": ["redseiko.valheim.chatter"],
+    "Azumatt-Unshamed": ["Azumatt.Unshamed"],
+    "ComfyMods-Intermission": ["redseiko.valheim.intermission"],
+    "Azumatt-FastLink": ["Azumatt.FastLink"]
+  },
+  "client_embedded": {
+    "RagnavikSleepTimer": {
+      "version": "1.0.0",
+      "guids": ["LostKode.RagnavikSleepTimer"]
+    }
+  },
+  "server_only": {
+    "RagnavikEpicMMOReloadGuard": {
+      "version": "1.0.0",
+      "guids": ["LostKode.RagnavikEpicMMOReloadGuard"]
+    },
+    "RagnavikProgress": {
+      "version": "1.1.0",
+      "source": "separately mounted live server component",
+      "guids": ["lostkode.ragnavik.progress"]
+    }
+  }
+}

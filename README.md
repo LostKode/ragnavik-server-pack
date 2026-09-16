@@ -1,4 +1,4 @@
-# Ragnavik Server
+# Ragnavik Server Pack
 
 This is the authoritative gameplay core for the Ragnavik Valheim server. Players should install the main **Ragnavik** client pack, which includes this package automatically.
 

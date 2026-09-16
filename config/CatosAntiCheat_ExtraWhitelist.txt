@@ -1,4 +1,5 @@
-# Approved Ragnavik client-only quality-of-life plugins.
+# GENERATED: client-only plugins from the complete effective client manifest. Run scripts/generate_anticheat_policy.py.
+lostkode.ragnavik.ui
 advize.PlantEasily
 Azumatt.AzuAntiArthriticCrafting
 redseiko.valheim.comfyautorepair
@@ -13,4 +14,3 @@ Azumatt.Unshamed
 redseiko.valheim.intermission
 Azumatt.FastLink
 LostKode.RagnavikSleepTimer
-lostkode.ragnavik.ui

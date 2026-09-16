@@ -1,0 +1,64 @@
+#!/usr/bin/env python3
+"""Validate package metadata, policy generation, contents, and reproducibility."""
+
+from __future__ import annotations
+
+import json
+import struct
+import subprocess
+import sys
+import tempfile
+from pathlib import Path
+
+from build_package import build, package_files
+
+ROOT = Path(__file__).resolve().parents[1]
+FORBIDDEN_PARTS = {"node_modules", "bin", "obj", "__pycache__", ".git"}
+
+
+def fail(message: str) -> None:
+    raise RuntimeError(message)
+
+
+def main() -> int:
+    try:
+        manifest = json.loads((ROOT / "manifest.json").read_text(encoding="utf-8"))
+        if manifest.get("name") != "Ragnavik_Server" or manifest.get("version_number") != "1.0.12":
+            fail("manifest must describe published LostKode-Ragnavik_Server 1.0.12")
+        dependencies = manifest.get("dependencies", [])
+        if not dependencies or len(dependencies) != len(set(dependencies)):
+            fail("manifest dependencies must be nonempty and unique")
+        required = [ROOT / name for name in ("README.md", "CHANGELOG.md", "icon.png")]
+        if any(not path.is_file() for path in required):
+            fail("README.md, CHANGELOG.md, and icon.png are required")
+        png = (ROOT / "icon.png").read_bytes()
+        if png[:8] != b"\x89PNG\r\n\x1a\n" or struct.unpack(">II", png[16:24]) != (256, 256):
+            fail("icon.png must be a 256 by 256 PNG")
+        for path in ROOT.rglob("*"):
+            relative = path.relative_to(ROOT)
+            if set(relative.parts) & FORBIDDEN_PARTS and ".git" not in relative.parts:
+                fail(f"forbidden generated path: {relative}")
+            if path.is_file() and path.suffix.lower() == ".zip":
+                fail(f"release ZIP must not be committed: {relative}")
+        subprocess.run(
+            [sys.executable, str(ROOT / "scripts/generate_anticheat_policy.py"), "--check"],
+            check=True,
+        )
+        with tempfile.TemporaryDirectory() as directory:
+            first = Path(directory) / "first.zip"
+            second = Path(directory) / "second.zip"
+            first_hash = build(first)
+            second_hash = build(second)
+            if first_hash != second_hash or first.read_bytes() != second.read_bytes():
+                fail("package build is not reproducible")
+        print(f"validated {manifest['name']} {manifest['version_number']}")
+        print(f"package files: {len(package_files())}")
+        print(f"reproducible sha256: {first_hash}")
+        return 0
+    except (OSError, ValueError, KeyError, RuntimeError, json.JSONDecodeError, subprocess.CalledProcessError) as error:
+        print(f"validation failed: {error}", file=sys.stderr)
+        return 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

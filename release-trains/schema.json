@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ragnavik release train",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "release_id", "blog_url", "packages", "deployment_required"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "release_id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9._-]{2,79}$"},
+    "blog_url": {"type": "string", "format": "uri", "pattern": "^https://"},
+    "deployment_required": {"type": "boolean"},
+    "packages": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ui", "progress", "sleep_timer", "server", "client"],
+      "properties": {
+        "ui": {"type": ["string", "null"], "pattern": "^\\d+\\.\\d+\\.\\d+$"},
+        "progress": {"type": ["string", "null"], "pattern": "^\\d+\\.\\d+\\.\\d+$"},
+        "sleep_timer": {"type": ["string", "null"], "pattern": "^\\d+\\.\\d+\\.\\d+$"},
+        "server": {"type": ["string", "null"], "pattern": "^\\d+\\.\\d+\\.\\d+$"},
+        "client": {"type": ["string", "null"], "pattern": "^\\d+\\.\\d+\\.\\d+$"}
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+name: Finalize release train
+run-name: Finalize ${{ inputs.train_file }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      train_file:
+        description: Repository-relative release train JSON file
+        required: true
+        type: string
+      dispatch_packages:
+        description: Dispatch package workflows after validation
+        required: true
+        default: false
+        type: boolean
+      publish:
+        description: Let dispatched workflows publish to Thunderstore
+        required: true
+        default: false
+        type: boolean
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ragnavik-release-train
+  cancel-in-progress: false
+
+jobs:
+  finalize:
+    runs-on: ${{ vars.RELEASE_RUNNER || 'ubuntu-latest' }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reject inconsistent inputs
+        if: inputs.publish && !inputs.dispatch_packages
+        run: |
+          echo "publish requires dispatch_packages" >&2
+          exit 1
+      - id: train
+        name: Validate release train
+        run: >-
+          python3 scripts/validate_release_train.py
+          "${{ inputs.train_file }}"
+          --github-output "$GITHUB_OUTPUT"
+      - name: Validate only
+        if: ${{ !inputs.dispatch_packages }}
+        run: |
+          echo "Validated ${{ steps.train.outputs.release_id }}"
+          echo "No package workflows were dispatched."
+      - name: Dispatch and wait for package workflows
+        if: inputs.dispatch_packages
+        env:
+          GH_TOKEN: ${{ secrets.RAGNAVIK_RELEASE_TOKEN }}
+        run: >-
+          python3 scripts/orchestrate_release_train.py
+          "${{ inputs.train_file }}"
+          ${{ inputs.publish && '--publish' || '' }}
+      - name: Release-train result
+        run: |
+          if [[ "${{ steps.train.outputs.deployment_required }}" == "true" ]]; then
+            echo "READY_FOR_DEPLOYMENT: ${{ steps.train.outputs.release_id }}" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "COMPLETE_NO_SERVER_DEPLOYMENT: ${{ steps.train.outputs.release_id }}" >> "$GITHUB_STEP_SUMMARY"
+          fi
+          echo 'Production deployment is not triggered by this workflow.' >> "$GITHUB_STEP_SUMMARY"

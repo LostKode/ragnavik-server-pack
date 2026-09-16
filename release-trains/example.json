@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "release_id": "2026-09-16-ragnavik-1.1.13",
+  "release_id": "2026-09-17-ragnavik-1.1.13",
   "blog_url": "https://www.ragnavik.com/blog/replace-with-release-post",
   "packages": {
-    "ui": "1.0.3",
+    "ui": null,
     "progress": null,
     "sleep_timer": null,
     "server": "1.0.13",

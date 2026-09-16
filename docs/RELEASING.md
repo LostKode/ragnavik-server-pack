@@ -9,6 +9,24 @@ For releases that span UI, Progress, Server, or Client packages, follow [the coo
 5. Run `python3 scripts/validate.py`.
 6. Create a corresponding Ragnavik website blog post. It must name the release version and explain the player-visible changes. A server-pack release is blocked until this post is ready.
 7. Build with `python3 scripts/build_package.py`. Publish the generated ZIP, then verify the exact public package version and dependency list from Thunderstore.
+
+## Pre-push dependency refresh
+
+Run the update checker a few hours before the planned push window:
+
+```sh
+python3 scripts/check_mod_updates.py
+```
+
+The checker reads the live Thunderstore catalog, classifies direct dependency updates as patch, minor, or major, and reports the dependencies required by each candidate release. It never edits a manifest by default. Review upstream changelogs and behavior changes before accepting an update. Minor and major updates must always be applied manually after review.
+
+After reviewing a patch release, apply only the explicitly approved package names:
+
+```sh
+python3 scripts/check_mod_updates.py --apply-patch Therzie-Warfare RandyKnapp-EpicLoot
+```
+
+The command refuses non-patch changes and packages that were not named. Run package validation, review the manifest diff, and rebuild the archive after every application.
 8. Commit source changes only. Never commit `dist/`, ZIP archives, `node_modules`, build directories, secrets, private server addresses, or generated caches.
 
 Publishing the package does not deploy it. Production deployment follows `docs/DEPLOYMENT.md` and requires separate approval.

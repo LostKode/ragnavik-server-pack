@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.0.13
+
+* Update Warfare from 1.9.1 to 1.9.2.
+* Update OdinShip from 0.7.9 to 0.8.1.
+* Update Odin's Kingdom from 1.5.7 to 1.5.8.
+* Update Better Beehives from 1.2.4 to 1.3.0.
+* Update Epic Loot from 0.14.5 to 0.14.7.
+* Retain ProperPortals 1.4.3 and the ConditionalConfigSync version it requires.
+* Retain ShieldMeBruh 2.0.2 and XPortalNetworks 2.0.1 pending telemetry and startup splash review.
+
 ## 1.0.12
 
 * Update Odin's Kingdom from 1.5.6 to 1.5.7.

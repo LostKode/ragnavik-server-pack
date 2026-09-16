@@ -1,0 +1,3 @@
+# Add genuinely server-only plugin GUIDs here if an audit proves they are not required by clients.
+LostKode.RagnavikEpicMMOReloadGuard
+lostkode.ragnavik.progress

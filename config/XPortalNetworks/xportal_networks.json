@@ -1,0 +1,9 @@
+{
+  "comments": [
+    "Ragnavik server authoritative portal networks"
+  ],
+  "networks": [
+    { "id": 1, "name": "Bosses" },
+    { "id": 2, "name": "Vendors" }
+  ]
+}

@@ -1,0 +1,1 @@
+# Add approved admin-only plugin GUIDs here. Empty by default.

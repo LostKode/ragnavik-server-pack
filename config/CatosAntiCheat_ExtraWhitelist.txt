@@ -1,0 +1,16 @@
+# Approved Ragnavik client-only quality-of-life plugins.
+advize.PlantEasily
+Azumatt.AzuAntiArthriticCrafting
+redseiko.valheim.comfyautorepair
+virtuacode.valheim.trashitems
+Azumatt.BuildCameraCHE
+Azumatt.AzuClock
+Azumatt.AzuAreaRepair
+bruce.valheim.comfymods.gizmo
+neobotics.valheim_mod.hudcompass
+redseiko.valheim.chatter
+Azumatt.Unshamed
+redseiko.valheim.intermission
+Azumatt.FastLink
+LostKode.RagnavikSleepTimer
+lostkode.ragnavik.ui

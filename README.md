@@ -2,7 +2,7 @@
 
 This is the authoritative gameplay core for the Ragnavik Valheim server. Players should install the main **Ragnavik** client pack, which includes this package automatically.
 
-Version 1.0.12 updates Odin's Kingdom to 1.5.7, fixing rain passing through its shader replacer and rain damaging roofs. It retains OdinHorse 1.7.0, the server only boss progress reporter exemption, EpicMMO reload guard, ShieldMeBruh and XPortalNetworks updates, the client UI allowance, one sleeper SleepSkip vote, and 50 percent agreement. ConditionalConfigSync stays on the existing ProperPortals dependency path; no 1.0.8 upgrade is included.
+Version 1.0.13 updates Warfare to 1.9.2, OdinShip to 0.8.1, Odin's Kingdom to 1.5.8, Better Beehives to 1.3.0, ShieldMeBruh to 2.0.5, XPortalNetworks to 2.0.4, and Epic Loot to 0.14.7. The updates improve compatibility, audio, Deep North beehive support, enchanting table refunds, bounty and treasure spawning, and portal and shield maintenance. ConditionalConfigSync stays on the version required by ProperPortals 1.4.3. Ragnavik disables the Vapok startup splash and anonymous telemetry in both updated mods.
 
 ## Balance profile
 
@@ -27,6 +27,16 @@ Players must create a new character that has never entered a world before joinin
 Mod enforcement is fail-closed and uses exact version matching. Anti-cheat rejections are reported to the private server Discord webhook. The webhook itself is stored only on the server and is never included in this public package.
 
 ## Changelog
+
+### 1.0.13
+
+* Update Warfare to 1.9.2 for custom status effect audio and duplicate build category fixes.
+* Update OdinShip to 0.8.1 so its custom sounds follow the Valheim effects volume setting.
+* Update Odin's Kingdom to the current 1.5.8 maintenance release.
+* Update Better Beehives to 1.3.0 for Deep North plants, weather-aware bees, and expanded seasonal and growbed compatibility.
+* Update Epic Loot to 0.14.7 for complete enchanting table upgrade refunds, faster bounty and treasure spawning, a more resilient trader interface, and current game build compatibility.
+* Update ShieldMeBruh to 2.0.5 and XPortalNetworks to 2.0.4 while disabling their startup splash and anonymous telemetry.
+* Retain ProperPortals 1.4.3 and its required ConditionalConfigSync dependency.
 
 ### 1.0.12
 

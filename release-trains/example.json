@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "release_id": "2026-09-16-ragnavik-1.1.13",
+  "blog_url": "https://www.ragnavik.com/blog/replace-with-release-post",
+  "packages": {
+    "ui": "1.0.3",
+    "progress": null,
+    "sleep_timer": null,
+    "catos_reporter": "1.0.0",
+    "server": "1.0.13",
+    "client": "1.1.13"
+  },
+  "deployment_required": true,
+  "deployment_window": {
+    "timezone": "America/Chicago",
+    "start": "01:00",
+    "duration_minutes": 60
+  }
+}

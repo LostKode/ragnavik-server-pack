@@ -1,0 +1,55 @@
+name: Publish to Thunderstore
+run-name: Thunderstore ${{ inputs.release_id }} ${{ inputs.expected_version }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_id: {description: Shared release train identifier, required: true, type: string}
+      expected_version: {description: Version expected in manifest.json, required: true, type: string}
+      blog_url: {description: Published Ragnavik release blog URL, required: true, type: string}
+      publish: {description: Upload after validation, required: true, default: false, type: boolean}
+
+permissions:
+  contents: read
+
+concurrency:
+  group: thunderstore-ragnavik-server
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ${{ vars.RELEASE_RUNNER || 'ubuntu-latest' }}
+    environment: thunderstore-production
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x"
+      - run: python3 scripts/validate.py
+      - run: python3 scripts/build_package.py "dist/LostKode-Ragnavik_Server-${{ inputs.expected_version }}.zip"
+      - run: dotnet tool restore
+      - name: Prepare release metadata
+        run: >-
+          python3 scripts/thunderstore_release.py prepare
+          --manifest manifest.json
+          --package "dist/LostKode-Ragnavik_Server-${{ inputs.expected_version }}.zip"
+          --expected-version "${{ inputs.expected_version }}"
+          --release-id "${{ inputs.release_id }}"
+          --blog-url "${{ inputs.blog_url }}"
+          --category modpacks --category server-side --category deep-north-update
+          --output .tcli/thunderstore.toml
+      - name: Publish package
+        if: inputs.publish
+        env:
+          THUNDERSTORE_TOKEN: ${{ secrets.THUNDERSTORE_TOKEN }}
+        run: >-
+          dotnet tool run tcli publish
+          --config-path .tcli/thunderstore.toml
+          --file "dist/LostKode-Ragnavik_Server-${{ inputs.expected_version }}.zip"
+          --token "$THUNDERSTORE_TOKEN"
+      - name: Verify public package
+        if: inputs.publish
+        run: >-
+          python3 scripts/thunderstore_release.py verify
+          --name Ragnavik_Server
+          --version "${{ inputs.expected_version }}"

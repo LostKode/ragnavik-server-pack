@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ragnavik release train",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "release_id", "blog_url", "packages", "deployment_required", "deployment_window"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "release_id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9._-]{2,79}$"},
+    "blog_url": {"type": "string", "format": "uri", "pattern": "^https://"},
+    "deployment_required": {"type": "boolean"},
+    "deployment_window": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["timezone", "start", "duration_minutes"],
+      "properties": {
+        "timezone": {"const": "America/Chicago"},
+        "start": {"const": "01:00"},
+        "duration_minutes": {"type": "integer", "minimum": 1, "maximum": 240}
+      }
+    },
+    "packages": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ui", "progress", "sleep_timer", "catos_reporter", "server", "client"],
+      "properties": {
+        "ui": {"type": ["string", "null"], "pattern": "^\\d+\\.\\d+\\.\\d+$"},
+        "progress": {"type": ["string", "null"], "pattern": "^\\d+\\.\\d+\\.\\d+$"},
+        "sleep_timer": {"type": ["string", "null"], "pattern": "^\\d+\\.\\d+\\.\\d+$"},
+        "catos_reporter": {"type": ["string", "null"], "pattern": "^\\d+\\.\\d+\\.\\d+$"},
+        "server": {"type": ["string", "null"], "pattern": "^\\d+\\.\\d+\\.\\d+$"},
+        "client": {"type": ["string", "null"], "pattern": "^\\d+\\.\\d+\\.\\d+$"}
+      }
+    }
+  }
+}

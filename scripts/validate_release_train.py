@@ -13,7 +13,7 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
-PACKAGE_KEYS = ("ui", "progress", "sleep_timer", "server", "client")
+PACKAGE_KEYS = ("ui", "progress", "sleep_timer", "catos_reporter", "server", "client")
 SEMVER = re.compile(r"^\d+\.\d+\.\d+$")
 RELEASE_ID = re.compile(r"^[a-z0-9][a-z0-9._-]{2,79}$")
 VERSIONED_DEPENDENCY = re.compile(r"^(?P<package>.+)-(?P<version>\d+\.\d+\.\d+)$")
@@ -90,8 +90,10 @@ def validate(train_path: Path, check_blog: bool) -> dict:
     for name, version in packages.items():
         if version is not None and (not isinstance(version, str) or not SEMVER.fullmatch(version)):
             fail(f"packages.{name} must be semantic x.y.z or null")
-    if (packages["server"] or packages["progress"]) and not train["deployment_required"]:
-        fail("Server or Progress releases must require deployment")
+    if (packages["server"] or packages["progress"] or packages["catos_reporter"]) and not train["deployment_required"]:
+        fail("Server, Progress, or Catos Reporter releases must require deployment")
+    if packages["catos_reporter"] and not packages["server"]:
+        fail("Catos Reporter releases must include the Server package with updated server-only policy")
     if (packages["ui"] or packages["sleep_timer"] or packages["server"]) and not packages["client"]:
         fail("UI, Sleep Timer, and Server releases must include the dependent Client package")
     if check_blog:
@@ -113,6 +115,11 @@ def validate(train_path: Path, check_blog: bool) -> dict:
         "packages.sleep_timer",
         packages["sleep_timer"],
         policy["client_embedded"]["RagnavikSleepTimer"]["version"],
+    )
+    require_equal(
+        "packages.catos_reporter",
+        packages["catos_reporter"],
+        policy["server_only"]["RagnavikCatosReporter"]["version"],
     )
     if client_dependencies.get("LostKode-Ragnavik_Server") != server["version_number"]:
         fail("effective client manifest does not pin the effective Server version")

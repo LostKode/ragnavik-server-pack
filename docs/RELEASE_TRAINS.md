@@ -14,7 +14,7 @@ After validation:
 
 Package preparation and Thunderstore publication may complete at any time. A production deployment may begin only during the declared maintenance window, currently 1:00 to 2:00 AM `America/Chicago`. The named timezone follows daylight-saving changes automatically. Any future deployment job must run `scripts/check_maintenance_window.py` immediately before changing the live service and fail closed outside the window.
 
-Cross-repository dispatch requires the organization secret `RAGNAVIK_RELEASE_TOKEN`. Use a fine-grained credential limited to the five package repositories with Contents read access and Actions read/write access. Package workflows keep using their separate `THUNDERSTORE_TOKEN`; the coordinator never receives it.
+Cross-repository dispatch requires the organization secret `RAGNAVIK_RELEASE_TOKEN`. Use a fine-grained credential limited to the six package repositories with Contents read access and Actions read/write access. Package workflows keep using their separate `THUNDERSTORE_TOKEN`; the coordinator never receives it.
 
 ## When to run each workflow
 
@@ -22,15 +22,16 @@ Cross-repository dispatch requires the organization secret `RAGNAVIK_RELEASE_TOK
 2. Run the UI workflow when the client pack or anti-cheat policy will require a new UI version.
 3. Run the Progress workflow when the server runtime or server-only policy will require a new Progress version.
 4. Run the Sleep Timer workflow when its plugin changes.
-5. After every changed standalone package is publicly verified, update and run the Server workflow with exact dependency and anti-cheat policy versions.
-6. After the Server package is publicly verified, update and run the Client workflow with exact Server and UI dependency versions.
-7. Only after all required package workflows report public verification may the separately approved production deployment begin.
+5. Run the Catos Reporter workflow when its server-only companion changes. A Reporter release must include Server and Client releases so the server-only anti-cheat policy stays synchronized.
+6. After every changed standalone package is publicly verified, update and run the Server workflow with exact dependency and anti-cheat policy versions.
+7. After the Server package is publicly verified, update and run the Client workflow with exact Server and UI dependency versions.
+8. Only after all required package workflows report public verification may the separately approved production deployment begin.
 
 The normal order is:
 
-`UI / Progress / Sleep Timer -> Server -> Client -> production deployment`
+`UI / Progress / Sleep Timer / Catos Reporter -> Server -> Client -> production deployment`
 
-UI and Progress may run in parallel because they do not depend on one another. Server must wait for every standalone package version it references. Client must wait for Server and UI.
+UI, Progress, Sleep Timer, and Catos Reporter may run in parallel because they do not depend on one another. Server must wait for every standalone package version it references. Client must wait for Server and UI.
 
 ## Production gate
 

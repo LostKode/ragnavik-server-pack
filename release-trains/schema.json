@@ -22,11 +22,12 @@
     "packages": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["ui", "progress", "sleep_timer", "server", "client"],
+      "required": ["ui", "progress", "sleep_timer", "catos_reporter", "server", "client"],
       "properties": {
         "ui": {"type": ["string", "null"], "pattern": "^\\d+\\.\\d+\\.\\d+$"},
         "progress": {"type": ["string", "null"], "pattern": "^\\d+\\.\\d+\\.\\d+$"},
         "sleep_timer": {"type": ["string", "null"], "pattern": "^\\d+\\.\\d+\\.\\d+$"},
+        "catos_reporter": {"type": ["string", "null"], "pattern": "^\\d+\\.\\d+\\.\\d+$"},
         "server": {"type": ["string", "null"], "pattern": "^\\d+\\.\\d+\\.\\d+$"},
         "client": {"type": ["string", "null"], "pattern": "^\\d+\\.\\d+\\.\\d+$"}
       }

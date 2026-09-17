@@ -1,3 +1,4 @@
 # GENERATED: server-only plugins from the complete effective server manifest. Run scripts/generate_anticheat_policy.py.
 LostKode.RagnavikEpicMMOReloadGuard
 lostkode.ragnavik.progress
+lostkode.ragnavik.catosreporter

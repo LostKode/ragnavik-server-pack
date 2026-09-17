@@ -30,6 +30,11 @@
       "version": "1.1.0",
       "source": "separately mounted live server component",
       "guids": ["lostkode.ragnavik.progress"]
+    },
+    "RagnavikCatosReporter": {
+      "version": "1.0.0",
+      "source": "separately mounted live server component",
+      "guids": ["lostkode.ragnavik.catosreporter"]
     }
   }
 }

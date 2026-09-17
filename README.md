@@ -2,7 +2,7 @@
 
 This is the authoritative gameplay core for the Ragnavik Valheim server. Players should install the main **Ragnavik** client pack, which includes this package automatically.
 
-Version 1.0.13 updates Warfare to 1.9.2, OdinShip to 0.8.1, Odin's Kingdom to 1.5.8, Better Beehives to 1.3.0, ShieldMeBruh to 2.0.5, XPortalNetworks to 2.0.4, and Epic Loot to 0.14.7. The updates improve compatibility, audio, Deep North beehive support, enchanting table refunds, bounty and treasure spawning, and portal and shield maintenance. ConditionalConfigSync stays on the version required by ProperPortals 1.4.3. Ragnavik disables the Vapok startup splash and anonymous telemetry in both updated mods.
+Version 1.0.14 restores the established version table changelog format. Mod dependencies and configuration are unchanged.
 
 ## Balance profile
 

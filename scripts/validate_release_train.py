@@ -13,7 +13,7 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
-PACKAGE_KEYS = ("ui", "progress", "sleep_timer", "server", "client")
+PACKAGE_KEYS = ("ui", "progress", "sleep_skip", "server", "client")
 SEMVER = re.compile(r"^\d+\.\d+\.\d+$")
 RELEASE_ID = re.compile(r"^[a-z0-9][a-z0-9._-]{2,79}$")
 VERSIONED_DEPENDENCY = re.compile(r"^(?P<package>.+)-(?P<version>\d+\.\d+\.\d+)$")
@@ -82,8 +82,8 @@ def validate(train_path: Path, check_blog: bool) -> dict:
             fail(f"packages.{name} must be semantic x.y.z or null")
     if (packages["server"] or packages["progress"]) and not train["deployment_required"]:
         fail("Server or Progress releases must require deployment")
-    if (packages["ui"] or packages["sleep_timer"] or packages["server"]) and not packages["client"]:
-        fail("UI, Sleep Timer, and Server releases must include the dependent Client package")
+    if (packages["ui"] or packages["sleep_skip"] or packages["server"]) and not packages["client"]:
+        fail("UI, Sleep Skip, and Server releases must include the dependent Client package")
     if check_blog:
         validate_blog(train["blog_url"])
 
@@ -100,9 +100,9 @@ def validate(train_path: Path, check_blog: bool) -> dict:
         policy["server_only"]["RagnavikProgress"]["version"],
     )
     require_equal(
-        "packages.sleep_timer",
-        packages["sleep_timer"],
-        policy["client_embedded"]["RagnavikSleepTimer"]["version"],
+        "packages.sleep_skip",
+        packages["sleep_skip"],
+        dependency_versions(server)["LostKode-Ragnavik_Sleep_Skip"],
     )
     if client_dependencies.get("LostKode-Ragnavik_Server") != server["version_number"]:
         fail("effective client manifest does not pin the effective Server version")

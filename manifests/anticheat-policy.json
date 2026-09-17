@@ -15,12 +15,7 @@
     "ComfyMods-Intermission": ["redseiko.valheim.intermission"],
     "Azumatt-FastLink": ["Azumatt.FastLink"]
   },
-  "client_embedded": {
-    "RagnavikSleepTimer": {
-      "version": "1.0.0",
-      "guids": ["LostKode.RagnavikSleepTimer"]
-    }
-  },
+  "client_embedded": {},
   "server_only": {
     "RagnavikEpicMMOReloadGuard": {
       "version": "1.0.0",

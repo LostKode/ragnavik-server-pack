@@ -19,7 +19,7 @@ WORKFLOW = "publish-thunderstore.yml"
 PACKAGES = {
     "ui": ("ragnavik-ui", "package/manifest.json"),
     "progress": ("ragnavik-progress", "package/manifest.json"),
-    "sleep_timer": ("ragnavik-sleep-timer", "package/manifest.json"),
+    "sleep_skip": ("ragnavik-sleep-skip", "package/manifest.json"),
     "server": ("ragnavik-server-pack", "manifest.json"),
     "client": ("ragnavik-client-pack", "manifest.json"),
 }
@@ -129,7 +129,7 @@ def main() -> None:
         raise SystemExit("GH_TOKEN is required for cross-repository coordination")
     train = validate(args.train, check_blog=True)
     check_remote_versions(train)
-    execute_phase(("ui", "progress", "sleep_timer"), train, args.publish)
+    execute_phase(("ui", "progress", "sleep_skip"), train, args.publish)
     execute_phase(("server",), train, args.publish)
     execute_phase(("client",), train, args.publish)
     status = "READY_FOR_DEPLOYMENT" if train["deployment_required"] else "COMPLETE_NO_SERVER_DEPLOYMENT"

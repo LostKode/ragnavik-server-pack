@@ -2,6 +2,8 @@
 
 This is the authoritative gameplay core for the Ragnavik Valheim server. Players should install the main **Ragnavik** client pack, which includes this package automatically.
 
+Version 1.0.14 replaces the unofficial SleepSkip rebuild and separate countdown plugin with Ragnavik Sleep Skip 1.0.0. The owned fork makes the dedicated server authoritative, counts only connected peers, uses network peer identities consistently, and includes the visible countdown. It otherwise retains the reviewed 1.0.13 dependency set.
+
 Version 1.0.13 updates Warfare to 1.9.2, OdinShip to 0.8.1, Odin's Kingdom to 1.5.8, Better Beehives to 1.3.0, and Epic Loot to 0.14.7. The updates improve custom status effect audio, ship sound volume control, Deep North beehive support, enchanting table refunds, bounty and treasure spawning, trader compatibility, and current game build compatibility. ConditionalConfigSync stays on the version required by ProperPortals 1.4.3. ShieldMeBruh and XPortalNetworks remain on their reviewed versions pending explicit review of newer telemetry and startup splash behavior.
 
 ## Balance profile
@@ -27,6 +29,13 @@ Players must create a new character that has never entered a world before joinin
 Mod enforcement is fail-closed and uses exact version matching. Anti-cheat rejections are reported to the private server Discord webhook. The webhook itself is stored only on the server and is never included in this public package.
 
 ## Changelog
+
+### 1.0.14
+
+* Replace TeamNibake SleepSkip1point0fork with LostKode Ragnavik Sleep Skip 1.0.0.
+* Count only connected peers and their current character bed state on the server.
+* Fold the former Ragnavik Sleep Timer countdown into the shared mod.
+* Remove the retired timer GUID from the client-only anti-cheat whitelist.
 
 ### 1.0.13
 

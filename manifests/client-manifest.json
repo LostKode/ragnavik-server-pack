@@ -1,8 +1,8 @@
 {
   "name": "Ragnavik",
-  "version_number": "1.1.13",
+  "version_number": "1.1.14",
   "dependencies": [
-    "LostKode-Ragnavik_Server-1.0.13",
+    "LostKode-Ragnavik_Server-1.0.14",
     "LostKode-Ragnavik_UI-1.0.2",
     "Advize-PlantEasily-2.2.0",
     "Azumatt-AAA_Crafting-2.1.8",

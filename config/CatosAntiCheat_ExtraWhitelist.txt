@@ -13,4 +13,3 @@ redseiko.valheim.chatter
 Azumatt.Unshamed
 redseiko.valheim.intermission
 Azumatt.FastLink
-LostKode.RagnavikSleepTimer

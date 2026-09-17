@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.14
+
+* Replace TeamNibake SleepSkip1point0fork with Ragnavik Sleep Skip 1.0.0.
+* Use server-authoritative connected-peer vote counting and consistent routed peer identities.
+* Remove the separate Ragnavik Sleep Timer anti-cheat exemption because its countdown is now integrated.
+
 ## 1.0.13
 
 * Update Warfare from 1.9.1 to 1.9.2.

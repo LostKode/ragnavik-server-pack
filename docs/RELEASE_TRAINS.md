@@ -19,14 +19,14 @@ Cross-repository dispatch requires the organization secret `RAGNAVIK_RELEASE_TOK
 1. Publish the website release post.
 2. Run the UI workflow when the client pack or anti-cheat policy will require a new UI version.
 3. Run the Progress workflow when the server runtime or server-only policy will require a new Progress version.
-4. Run the Sleep Timer workflow when its plugin changes.
+4. Run the Sleep Skip workflow when its plugin changes.
 5. After every changed standalone package is publicly verified, update and run the Server workflow with exact dependency and anti-cheat policy versions.
 6. After the Server package is publicly verified, update and run the Client workflow with exact Server and UI dependency versions.
 7. Only after all required package workflows report public verification may the separately approved production deployment begin.
 
 The normal order is:
 
-`UI / Progress / Sleep Timer -> Server -> Client -> production deployment`
+`UI / Progress / Sleep Skip -> Server -> Client -> production deployment`
 
 UI and Progress may run in parallel because they do not depend on one another. Server must wait for every standalone package version it references. Client must wait for Server and UI.
 

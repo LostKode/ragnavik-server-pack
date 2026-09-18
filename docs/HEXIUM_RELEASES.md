@@ -22,7 +22,7 @@ Hexium accepts Thunderstore-compatible ZIPs with root-level `manifest.json`, `ic
 
 Hexium's FAQ documents team API tokens and warns that they act on behalf of the account. However, the official OpenAPI specification currently contains package discovery, metrics, profile, and media endpoints but no package publication endpoint. The official packaging page sends publishers to the website submit page. No official Hexium upload CLI is documented.
 
-For that reason, `scripts/hexium_release.py` validates deterministic artifacts and the website blog gate, but its `upload` command deliberately fails closed. CI has no Hexium or Thunderstore credential reference. Do not add a guessed endpoint or automate the browser. Once Hexium publishes an upload contract, update the tool against that primary documentation, store its token in a protected environment, and keep publication opt-in.
+The `Publish to Hexium` workflow validates deterministic artifacts and the website blog gate, uploads the validated ZIP as a workflow artifact, and publishes through TCLI only when `publish` is explicitly enabled. Publication uses the protected `HEXIUM_AUTH_TOKEN` secret and verifies the exact public version afterward.
 
 ## Dry run
 

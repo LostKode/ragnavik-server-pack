@@ -14,7 +14,7 @@ After validation:
 
 Package preparation may complete at any time. Publication is a separate, explicitly authorized operation. A production deployment may begin only during the declared maintenance window, currently 1:00 to 2:00 AM `America/Chicago`. The named timezone follows daylight-saving changes automatically. Any future deployment job must run `scripts/check_maintenance_window.py` immediately before changing the live service and fail closed outside the window.
 
-Cross-repository dispatch requires the organization secret `RAGNAVIK_RELEASE_TOKEN`. Use a fine-grained credential limited to the six package repositories with Contents read access and Actions read/write access. Package workflows do not receive store credentials while Hexium upload remains undocumented and fail closed.
+Cross-repository dispatch requires the organization secret `RAGNAVIK_RELEASE_TOKEN`. Use a fine-grained credential limited to the six package repositories with Contents read access and Actions read/write access. Package publication remains opt-in and uses `HEXIUM_AUTH_TOKEN` through the protected `hexium-production` environment.
 
 ## When to run each workflow
 

@@ -1,4 +1,4 @@
-name: Prepare Hexium package
+name: Publish to Hexium
 run-name: Hexium ${{ inputs.release_id }} ${{ inputs.expected_version }}
 
 on:
@@ -7,7 +7,7 @@ on:
       release_id: {description: Shared release train identifier, required: true, type: string}
       expected_version: {description: Expected package version, required: true, type: string}
       blog_url: {description: Published Ragnavik release blog URL, required: true, type: string}
-      publish: {description: Request upload after validation (currently fail closed), required: true, default: false, type: boolean}
+      publish: {description: Upload after validation, required: true, default: false, type: boolean}
 
 permissions:
   contents: read
@@ -19,26 +19,49 @@ concurrency:
 jobs:
   release:
     runs-on: ${{ vars.RELEASE_RUNNER || 'ubuntu-latest' }}
+    environment: hexium-production
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x"
       - run: PYTHONDONTWRITEBYTECODE=1 python3 scripts/validate.py
       - run: python3 scripts/build_package.py "dist/LostKode-Ragnavik_Server-${{ inputs.expected_version }}.zip"
-      - name: Validate Hexium artifact and release gate
+      - run: dotnet tool restore
+      - name: Prepare Hexium release metadata
         run: >-
-          python3 scripts/hexium_release.py validate
+          python3 scripts/hexium_publish.py prepare
           --manifest manifest.json
           --package "dist/LostKode-Ragnavik_Server-${{ inputs.expected_version }}.zip"
-          --identity LostKode-Ragnavik_Server
           --expected-version "${{ inputs.expected_version }}"
           --release-id "${{ inputs.release_id }}"
           --blog-url "${{ inputs.blog_url }}"
-      - name: Upload package
+          --repository https://hexium.gg
+          --category modpacks --category server-side --category "Valheim 1.0"
+          --output .tcli/hexium.toml
+      - uses: actions/upload-artifact@v4
+        with:
+          name: LostKode-Ragnavik_Server-${{ inputs.expected_version }}
+          path: dist/LostKode-Ragnavik_Server-${{ inputs.expected_version }}.zip
+          if-no-files-found: error
+      - name: Require Hexium token for publication
+        if: inputs.publish
+        env:
+          HEXIUM_AUTH_TOKEN: ${{ secrets.HEXIUM_AUTH_TOKEN }}
+        run: test -n "$HEXIUM_AUTH_TOKEN"
+      - name: Publish package
+        if: inputs.publish
+        env:
+          HEXIUM_AUTH_TOKEN: ${{ secrets.HEXIUM_AUTH_TOKEN }}
+        run: >-
+          dotnet tool run tcli publish
+          --config-path .tcli/hexium.toml
+          --file "dist/LostKode-Ragnavik_Server-${{ inputs.expected_version }}.zip"
+          --token "$HEXIUM_AUTH_TOKEN"
+      - name: Verify public package
         if: inputs.publish
         run: >-
-          python3 scripts/hexium_release.py upload
-          --manifest manifest.json
-          --package "dist/LostKode-Ragnavik_Server-${{ inputs.expected_version }}.zip"
-          --identity LostKode-Ragnavik_Server
-          --expected-version "${{ inputs.expected_version }}"
-          --release-id "${{ inputs.release_id }}"
-          --blog-url "${{ inputs.blog_url }}"
+          python3 scripts/hexium_publish.py verify
+          --repository https://hexium.gg
+          --name Ragnavik_Server
+          --version "${{ inputs.expected_version }}"

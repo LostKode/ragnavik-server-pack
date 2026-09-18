@@ -2,19 +2,19 @@
 
 Ragnavik package publication and production deployment are separate operations. Publishing a package never authorizes or triggers a server restart.
 
-Use one release identifier for every package participating in the same rollout, for example `2026-09-16-ragnavik-1.1.13`. Pass that identifier, the package's expected version, and the published website blog URL to each repository's **Publish to Thunderstore** workflow.
+Use one release identifier for every package participating in the same rollout, for example `2026-09-16-ragnavik-1.1.13`. Pass that identifier, the package's expected version, and the published website blog URL to each repository's **Prepare Hexium package** workflow.
 
 Create the release definition under `release-trains/` from `release-trains/example.json`, then run **Finalize release train**. Start with both `dispatch_packages` and `publish` disabled. This validates the train, effective manifests, generated anti-cheat files, and public blog post without starting package jobs.
 
 After validation:
 
 1. Enable `dispatch_packages` with `publish` disabled to run complete package dry runs in dependency order.
-2. Enable both options only when the package source on every default branch is final and the immutable Thunderstore versions are ready to publish.
+2. Keep `publish` disabled. It currently exercises a deliberate fail-closed check because no official automated upload contract exists.
 3. Read the workflow summary for `READY_FOR_DEPLOYMENT` or `COMPLETE_NO_SERVER_DEPLOYMENT`.
 
-Package preparation and Thunderstore publication may complete at any time. A production deployment may begin only during the declared maintenance window, currently 1:00 to 2:00 AM `America/Chicago`. The named timezone follows daylight-saving changes automatically. Any future deployment job must run `scripts/check_maintenance_window.py` immediately before changing the live service and fail closed outside the window.
+Package preparation may complete at any time. Publication is a separate, explicitly authorized operation. A production deployment may begin only during the declared maintenance window, currently 1:00 to 2:00 AM `America/Chicago`. The named timezone follows daylight-saving changes automatically. Any future deployment job must run `scripts/check_maintenance_window.py` immediately before changing the live service and fail closed outside the window.
 
-Cross-repository dispatch requires the organization secret `RAGNAVIK_RELEASE_TOKEN`. Use a fine-grained credential limited to the six package repositories with Contents read access and Actions read/write access. Package workflows keep using their separate `THUNDERSTORE_TOKEN`; the coordinator never receives it.
+Cross-repository dispatch requires the organization secret `RAGNAVIK_RELEASE_TOKEN`. Use a fine-grained credential limited to the six package repositories with Contents read access and Actions read/write access. Package workflows do not receive store credentials while Hexium upload remains undocumented and fail closed.
 
 ## When to run each workflow
 
@@ -37,7 +37,7 @@ UI, Progress, Sleep Timer, and Catos Reporter may run in parallel because they d
 
 Before replacing or restarting the Valheim task:
 
-- Confirm every package required by the intended manifests is visible on its direct Thunderstore listing at the exact version.
+- Confirm every package required by the intended manifests is visible on its direct Hexium listing at the exact version.
 - Confirm the client and server manifests use those exact dependency strings.
 - Check for connected players.
 - Save the world.
@@ -47,7 +47,7 @@ After deployment, verify the target node, readiness, BepInEx startup logs, loade
 
 ## Dry runs
 
-Leave the workflow's `publish` input disabled to build and validate without uploading. Enable it only when the version is final and the website release post is already public. Thunderstore versions are immutable, so a failed or incomplete version must be corrected under a new version number.
+Leave the workflow’s `publish` input disabled to build and validate without uploading. The current upload command fails closed even when enabled. Once Hexium documents an official upload contract, publication may be implemented as an explicit opt-in after the version and website release post are final. Hexium versions are immutable, so a failed or incomplete version must be corrected under a new version number.
 
 ## Runner selection
 
@@ -55,4 +55,4 @@ Workflows use `ubuntu-latest` while the `RELEASE_RUNNER` organization variable i
 
 After registering the local runner with the `ragnavik-release` label, set `RELEASE_RUNNER` to `ragnavik-release`. The workflow itself does not change. Configure `VALHEIM_MANAGED_DIR` and `BEPINEX_CORE_DIR` to reuse local reference directories instead of downloading them. The runner requires Python 3.10 or newer, the .NET 8 SDK, `zip`, and `unzip`.
 
-Store the Thunderstore service-account token only in the protected `thunderstore-production` environment as `THUNDERSTORE_TOKEN`.
+Automated upload remains disabled because Hexium does not document a package publication endpoint. CI must remain credential-free until an official contract exists.

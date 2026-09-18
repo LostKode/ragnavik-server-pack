@@ -15,7 +15,7 @@ from pathlib import Path
 from validate_release_train import validate
 
 ROOT = Path(__file__).resolve().parents[1]
-WORKFLOW = "publish-thunderstore.yml"
+WORKFLOW = "prepare-hexium.yml"
 PACKAGES = {
     "ui": ("ragnavik-ui", "package/manifest.json"),
     "progress": ("ragnavik-progress", "package/manifest.json"),
@@ -79,7 +79,7 @@ def dispatch(package: str, version: str, train: dict, publish: bool) -> tuple[st
 
 
 def find_run(repo: str, version: str, release_id: str, started: dt.datetime) -> int:
-    title = f"Thunderstore {release_id} {version}"
+    title = f"Hexium {release_id} {version}"
     for _ in range(120):
         data = json.loads(run([
             "gh", "run", "list",

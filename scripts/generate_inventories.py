@@ -10,7 +10,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-BASE = "14402f192cb744a87e92ec7e0154b811c7de9106"
+BASE = "3e744643a5b9591ca9a90a45165956e784cbc0af"
 OUTPUT = ROOT / "manifests/package-inventories.json"
 APPROVED_REMOVALS = {
     "ADARC-BackpacksValheim1Compat",
@@ -18,6 +18,7 @@ APPROVED_REMOVALS = {
     "Chazman-RunicCharacterVault",
     "Crystal-ProperPortals",
     "Digitalroot-Eternal_Fire",
+    "KG-Marketplace_And_Server_NPCs_Revamped-10.0.0",
     "MainStreetGaming-BetterDiving",
     "MaxFoxGaming-Better_Beehives",
     "RandyKnapp-Jam",

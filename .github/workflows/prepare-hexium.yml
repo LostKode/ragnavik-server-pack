@@ -7,7 +7,7 @@ on:
       release_id: {description: Shared release train identifier, required: true, type: string}
       expected_version: {description: Expected package version, required: true, type: string}
       blog_url: {description: Published Ragnavik release blog URL, required: true, type: string}
-      publish: {description: Upload after validation, required: true, default: false, type: boolean}
+      publish: {description: Upload after validation, required: true, default: true, type: boolean}
 
 permissions:
   contents: read

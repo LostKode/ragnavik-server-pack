@@ -3,7 +3,7 @@
   "version_number": "UNRELEASED",
   "coordination_note": "Proposed client dependency snapshot. The client package task owns its release version and repository changes.",
   "dependencies": [
-    "LostKode-Ragnavik_Server-1.1.1",
+    "LostKode-Ragnavik_Server-1.1.2",
     "LostKode-Ragnavik_UI-1.0.3",
     "Advize-PlantEasily-2.2.0",
     "Azumatt-AAA_Crafting-2.1.8",

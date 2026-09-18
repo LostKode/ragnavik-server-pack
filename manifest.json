@@ -1,13 +1,13 @@
 {
   "name": "Ragnavik_Server",
-  "version_number": "1.1.1",
+  "version_number": "1.1.2",
   "website_url": "https://ragnavik.vercel.app",
   "description": "Authoritative gameplay and synchronized configuration pack for the Ragnavik Valheim server.",
   "dependencies": [
     "denikson-BepInExPack_Valheim-5.4.2350",
     "ValheimModding-Jotunn-2.30.1",
-    "LostKode-Ragnavik_Compatibility-0.1.0",
-    "LostKode-Ragnavik_Server_Bridge-1.0.0",
+    "LostKode-Ragnavik_Compatibility-1.0.1",
+    "LostKode-Ragnavik_Server_Bridge-1.0.1",
     "Advize-PlantEverything-1.21.2",
     "Azumatt-AzuAutoStore-3.1.4",
     "Azumatt-AzuCraftyBoxes-1.8.19",

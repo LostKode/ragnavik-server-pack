@@ -11,6 +11,8 @@ import sys
 import tempfile
 from pathlib import Path
 
+sys.dont_write_bytecode = True
+
 from build_package import build, package_files
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -47,6 +49,14 @@ def main() -> int:
             [sys.executable, str(ROOT / "scripts/generate_anticheat_policy.py"), "--check"],
             check=True,
         )
+        subprocess.run(
+            [sys.executable, str(ROOT / "scripts/generate_inventories.py"), "--check"],
+            check=True,
+        )
+        dlls = [path for path in package_files() if path.suffix.lower() == ".dll"]
+        dll_names = [path.name.lower() for path in dlls]
+        if len(dll_names) != len(set(dll_names)):
+            fail("package contains duplicate DLL basenames")
         with tempfile.TemporaryDirectory() as directory:
             first = Path(directory) / "first.zip"
             second = Path(directory) / "second.zip"

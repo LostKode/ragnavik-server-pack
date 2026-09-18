@@ -3,38 +3,38 @@
     "LostKode-Ragnavik_UI": ["lostkode.ragnavik.ui"],
     "Advize-PlantEasily": ["advize.PlantEasily"],
     "Azumatt-AAA_Crafting": ["Azumatt.AzuAntiArthriticCrafting"],
-    "ComfyMods-ComfyAutoRepair": ["redseiko.valheim.comfyautorepair"],
-    "virtuaCode-TrashItems": ["virtuacode.valheim.trashitems"],
-    "Azumatt-Build_Camera_Custom_Hammers_Edition": ["Azumatt.BuildCameraCHE"],
-    "Azumatt-AzuClock": ["Azumatt.AzuClock"],
+    "Azumatt-AAABuildMenu": ["Azumatt.AAABuildMenu"],
+    "Azumatt-AllPlaceable": ["Azumatt.AllPlaceable"],
     "Azumatt-AzuAreaRepair": ["Azumatt.AzuAreaRepair"],
-    "ComfyMods-Gizmo": ["bruce.valheim.comfymods.gizmo"],
-    "Neobotics-HUDCompass": ["neobotics.valheim_mod.hudcompass"],
-    "ComfyMods-Chatter": ["redseiko.valheim.chatter"],
+    "Azumatt-AzuClock": ["Azumatt.AzuClock"],
+    "Azumatt-Build_Camera_Custom_Hammers_Edition": ["Azumatt.BuildCameraCHE"],
+    "Azumatt-FastLink": ["Azumatt.FastLink"],
+    "Azumatt-ItemCompare": ["Azumatt.ItemCompare"],
+    "Azumatt-MouseTweaks": ["Azumatt.MouseTweaks"],
+    "Azumatt-SaveCrossbowState": ["Azumatt.SaveCrossbowState"],
+    "Azumatt-TooltipExpansion": ["Azumatt.TooltipExpansion"],
+    "Azumatt-TrueInstantLootDrop": ["Azumatt.TrueInstantLootDrop"],
     "Azumatt-Unshamed": ["Azumatt.Unshamed"],
-    "ComfyMods-Intermission": ["redseiko.valheim.intermission"],
-    "Azumatt-FastLink": ["Azumatt.FastLink"]
+    "ComfyMods-Chatter": ["redseiko.valheim.chatter"],
+    "Neobotics-HUDCompass": ["neobotics.valheim_mod.hudcompass"],
+    "RDMods-CustomMainMenu": ["rdmods.custommainmenu"],
+    "Smoothbrain-ShutUp": ["org.bepinex.patchers.shutup"],
+    "Smoothbrain-SoundOfSilence": ["org.bepinex.plugins.soundofsilence"],
+    "Smoothbrain-SteadyRegeneration": ["org.bepinex.plugins.steadyregeneration"]
   },
-  "client_embedded": {
-    "RagnavikSleepTimer": {
-      "version": "1.0.0",
-      "guids": ["LostKode.RagnavikSleepTimer"]
-    }
-  },
+  "client_embedded": {},
   "server_only": {
-    "RagnavikEpicMMOReloadGuard": {
+    "LostKode-Ragnavik_Server_Bridge": {
       "version": "1.0.0",
-      "guids": ["LostKode.RagnavikEpicMMOReloadGuard"]
+      "guids": ["lostkode.ragnavik.serverbridge"]
     },
-    "RagnavikProgress": {
-      "version": "1.1.0",
-      "source": "separately mounted live server component",
-      "guids": ["lostkode.ragnavik.progress"]
+    "Azumatt-MaxPlayerCount": {
+      "version": "1.2.5",
+      "guids": ["Azumatt.MaxPlayerCount"]
     },
-    "RagnavikCatosReporter": {
-      "version": "1.0.0",
-      "source": "separately mounted live server component",
-      "guids": ["lostkode.ragnavik.catosreporter"]
+    "Smoothbrain-Network": {
+      "version": "1.1.1",
+      "guids": ["org.bepinex.plugins.network"]
     }
   }
 }

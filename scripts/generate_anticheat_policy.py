@@ -65,6 +65,14 @@ def outputs() -> dict[Path, str]:
     if len(extra_guids) != len(set(extra_guids)) or len(server_guids) != len(set(server_guids)):
         raise ValueError("duplicate plugin GUID in anti-cheat policy")
 
+    server_deps = dict(split_dependency(item) for item in server["dependencies"])
+    for package, component in policy["server_only"].items():
+        actual = server_deps.get(package)
+        if actual != component["version"]:
+            raise ValueError(
+                f"server-only mapping mismatch for {package}; expected={component['version']}, actual={actual}"
+            )
+
     return {
         ROOT / "config/CatosAntiCheat_ExtraWhitelist.txt": render(
             "client-only plugins from the complete effective client manifest", extra_guids

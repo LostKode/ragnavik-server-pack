@@ -17,7 +17,6 @@
     "Azumatt-Unshamed": ["Azumatt.Unshamed"],
     "ComfyMods-Chatter": ["redseiko.valheim.chatter"],
     "Neobotics-HUDCompass": ["neobotics.valheim_mod.hudcompass"],
-    "RDMods-CustomMainMenu": ["rdmods.custommainmenu"],
     "Smoothbrain-ShutUp": ["org.bepinex.patchers.shutup"],
     "Smoothbrain-SoundOfSilence": ["org.bepinex.plugins.soundofsilence"],
     "Smoothbrain-SteadyRegeneration": ["org.bepinex.plugins.steadyregeneration"]
@@ -29,7 +28,7 @@
       "guids": ["lostkode.ragnavik.serverbridge"]
     },
     "Azumatt-MaxPlayerCount": {
-      "version": "1.2.5",
+      "version": "1.2.6",
       "guids": ["Azumatt.MaxPlayerCount"]
     },
     "Smoothbrain-Network": {

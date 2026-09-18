@@ -16,6 +16,7 @@ Azumatt.TrueInstantLootDrop
 Azumatt.Unshamed
 redseiko.valheim.chatter
 neobotics.valheim_mod.hudcompass
+rdmods.custommainmenu
 org.bepinex.patchers.shutup
 org.bepinex.plugins.soundofsilence
 org.bepinex.plugins.steadyregeneration

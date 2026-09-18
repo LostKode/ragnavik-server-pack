@@ -1,0 +1,44 @@
+name: Prepare Hexium package
+run-name: Hexium ${{ inputs.release_id }} ${{ inputs.expected_version }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_id: {description: Shared release train identifier, required: true, type: string}
+      expected_version: {description: Expected package version, required: true, type: string}
+      blog_url: {description: Published Ragnavik release blog URL, required: true, type: string}
+      publish: {description: Request upload after validation (currently fail closed), required: true, default: false, type: boolean}
+
+permissions:
+  contents: read
+
+concurrency:
+  group: hexium-ragnavik-server
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ${{ vars.RELEASE_RUNNER || 'ubuntu-latest' }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: PYTHONDONTWRITEBYTECODE=1 python3 scripts/validate.py
+      - run: python3 scripts/build_package.py "dist/LostKode-Ragnavik_Server-${{ inputs.expected_version }}.zip"
+      - name: Validate Hexium artifact and release gate
+        run: >-
+          python3 scripts/hexium_release.py validate
+          --manifest manifest.json
+          --package "dist/LostKode-Ragnavik_Server-${{ inputs.expected_version }}.zip"
+          --identity LostKode-Ragnavik_Server
+          --expected-version "${{ inputs.expected_version }}"
+          --release-id "${{ inputs.release_id }}"
+          --blog-url "${{ inputs.blog_url }}"
+      - name: Upload package
+        if: inputs.publish
+        run: >-
+          python3 scripts/hexium_release.py upload
+          --manifest manifest.json
+          --package "dist/LostKode-Ragnavik_Server-${{ inputs.expected_version }}.zip"
+          --identity LostKode-Ragnavik_Server
+          --expected-version "${{ inputs.expected_version }}"
+          --release-id "${{ inputs.release_id }}"
+          --blog-url "${{ inputs.blog_url }}"

@@ -14,7 +14,7 @@ on:
         default: false
         type: boolean
       publish:
-        description: Request Hexium upload in dispatched workflows (currently fail closed)
+        description: Let dispatched workflows publish to Hexium
         required: true
         default: false
         type: boolean

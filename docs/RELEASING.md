@@ -8,7 +8,7 @@ For releases that span UI, Progress, Server, or Client packages, follow [the coo
 4. Run `python3 scripts/generate_anticheat_policy.py` and review both generated files.
 5. Run `python3 scripts/validate.py`.
 6. Create a corresponding Ragnavik website blog post. It must name the release version and explain the player-visible changes. A server-pack release is blocked until this post is ready.
-7. Build with `python3 scripts/build_package.py`. Publish the generated ZIP, then verify the exact public package version and dependency list from Thunderstore.
+7. Build with `python3 scripts/build_package.py`. Publish the generated ZIP, then verify the exact public package version and dependency list from Hexium.
 
 ## Pre-push dependency refresh
 

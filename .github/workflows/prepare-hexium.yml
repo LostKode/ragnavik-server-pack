@@ -40,7 +40,7 @@ jobs:
           --expected-version "$EXPECTED_VERSION"
           --release-id "${{ github.run_id }}"
           --repository https://hexium.gg
-          --category modpacks --category server-side --category "Valheim 1.0"
+          --category Modpack --category "Client & Server" --category "Valheim 1.0"
           --output .tcli/hexium.toml
       - uses: actions/upload-artifact@v4
         with:
@@ -80,3 +80,4 @@ jobs:
           --repository https://hexium.gg
           --name Ragnavik_Server
           --version "$EXPECTED_VERSION"
+          --expected-install-location "Client & Server"

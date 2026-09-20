@@ -2,6 +2,7 @@
 
 | Version | Changes |
 | --- | --- |
+| 1.1.12 | Require Ragnavik Server Bridge 1.0.5 so deferred HTTP deliveries report safe receiver validation details without exposing credentials or request payloads. |
 | 1.1.11 | Correct BoardersBumperBlurbs, GhostBuild, HildirsQuest, and SmartSkills to their available Hexium 1.0.3 releases so the full shared mod set installs on both clients and the server. |
 | 1.1.10 | Update shared Afterdeath to 1.0.10, synchronize the stored Client Pack 1.1.29 manifest, and regenerate anti-cheat policy and inventories so Server Bridge is the only server-only package. |
 | 1.1.9 | Require Ragnavik Server Bridge 1.0.4 so progress and Catos notifications use their receiver-specific authentication headers. |

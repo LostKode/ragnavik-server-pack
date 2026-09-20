@@ -131,7 +131,8 @@
       "blacks7ar-OreMines"
     ],
     "added_files": [
-      "config/com.orianaventure.mod.WorldAdvancementProgression.cfg"
+      "config/com.orianaventure.mod.WorldAdvancementProgression.cfg",
+      "config/org.bepinex.plugins.farming.cfg"
     ],
     "approved_removed_dependencies": [
       "KG-Marketplace_And_Server_NPCs_Revamped-10.0.0"
@@ -407,6 +408,7 @@
       "config/com.catosvalheim.anticheat.cfg",
       "config/com.orianaventure.mod.LocationReset.cfg",
       "config/com.orianaventure.mod.WorldAdvancementProgression.cfg",
+      "config/org.bepinex.plugins.farming.cfg",
       "config/randyknapp.mods.epicloot.cfg"
     ],
     "patcher_files": [],

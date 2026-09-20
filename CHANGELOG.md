@@ -2,6 +2,7 @@
 
 | Version | Changes |
 | --- | --- |
+| 1.1.4 | Require Ragnavik Server Bridge 1.0.2 to restore CatosAntiCheat mismatch and timeout notifications. |
 | 1.1.3 | Update 16 shared dependencies: Epic Loot 0.14.10, BoardersBumperBlurbs 1.0.3, BottledNeck 0.3.3, HedgeWalls 1.0.16, OdinBear 1.4.9, OdinCampsite 1.6.5, OdinHorse 1.7.2, OdinsFoodBarrels 1.2.8, OdinsHorsePen 1.1.2, OdinsKingdom 1.6.0, OdinsTraps 1.1.23, OdinsUndercroft 1.3.5, PotionPlus 4.3.4, Ranching 1.1.8, WackyEpicMMOSystem 1.9.68, and Zen ModLib 1.14.7. Align the stored client manifest and anti cheat policy after FastLink and CustomMainMenu removal. |
 | 1.1.2 | Correct the Hexium installation classification to Client & Server and require Ragnavik Compatibility 1.0.1 plus Ragnavik Server Bridge 1.0.1. |
 | 1.1.1 | Update Epic Loot, First Person Mode, Haulers Helper, Max Player Count, Ship Stats, OdinShip, and Jotunn. Remove Marketplace for now and restore CustomMainMenu with intro skipping disabled. |

@@ -23,7 +23,7 @@
   "client_embedded": {},
   "server_only": {
     "LostKode-Ragnavik_Server_Bridge": {
-      "version": "1.0.3",
+      "version": "1.0.4",
       "guids": ["lostkode.ragnavik.serverbridge"]
     },
     "Azumatt-MaxPlayerCount": {

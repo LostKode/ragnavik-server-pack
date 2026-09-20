@@ -2,6 +2,7 @@
 
 | Version | Changes |
 | --- | --- |
+| 1.1.9 | Require Ragnavik Server Bridge 1.0.4 so progress and Catos notifications use their receiver-specific authentication headers. |
 | 1.1.8 | Require Ragnavik Server Bridge 1.0.3 to restore CatosAntiCheat mismatch and timeout notifications without invalid Harmony IL during startup. |
 | 1.1.7 | Add OreMines 1.2.1 as a shared client and server dependency so the replacement Ragnavik world generates progression-gated mining dungeons natively. |
 | 1.1.6 | Add World Advancement Progression 1.0.0 as a shared client and server dependency. Configure per-player keys, nearby participant credit, private raids, area-host-based spawn progression, and day-gated boss altars. Retain Afterdeath 1.0.9 because it is already current. |

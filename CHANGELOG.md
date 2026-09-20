@@ -2,6 +2,7 @@
 
 | Version | Changes |
 | --- | --- |
+| 1.1.7 | Add OreMines 1.2.1 as a shared client and server dependency so the replacement Ragnavik world generates progression-gated mining dungeons natively. |
 | 1.1.6 | Add World Advancement Progression 1.0.0 as a shared client and server dependency. Configure per-player keys, nearby participant credit, private raids, area-host-based spawn progression, and day-gated boss altars. Retain Afterdeath 1.0.9 because it is already current. |
 | 1.1.5 | Update AzuAutoStore to 3.1.6, AzuCraftyBoxes to 1.8.22, AzuExtendedPlayerInventory to 2.5.1, CurrencyPocket to 1.0.15, QuickTapDodge to 1.0.5, Recycle N Reclaim to 1.4.5, MoreGatesExtended to 1.0.5, Blacksmithing to 1.3.6, and Ranching to 1.1.9 so the server matches the current shared client set. |
 | 1.1.4 | Require Ragnavik Server Bridge 1.0.2 to restore CatosAntiCheat mismatch and timeout notifications. |

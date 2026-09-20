@@ -127,7 +127,8 @@
   "diff": {
     "added_dependencies": [
       "VentureValheim-World_Advancement_Progression",
-      "ZenDragon-Zen_ModLib"
+      "ZenDragon-Zen_ModLib",
+      "blacks7ar-OreMines"
     ],
     "added_files": [
       "config/com.orianaventure.mod.WorldAdvancementProgression.cfg"
@@ -261,6 +262,7 @@
       "blacks7ar-LootParticlePlus-1.2.0",
       "blacks7ar-MagicBows-1.1.9",
       "blacks7ar-MagicPlugin-2.2.0",
+      "blacks7ar-OreMines-1.2.1",
       "blacks7ar-WeaponHolsterOverhaul-1.2.2",
       "catosaurluna-CatosAntiCheat-1.0.4",
       "denikson-BepInExPack_Valheim-5.4.2350",
@@ -387,6 +389,7 @@
       "blacks7ar-LootParticlePlus-1.2.0",
       "blacks7ar-MagicBows-1.1.9",
       "blacks7ar-MagicPlugin-2.2.0",
+      "blacks7ar-OreMines-1.2.1",
       "blacks7ar-WeaponHolsterOverhaul-1.2.2",
       "catosaurluna-CatosAntiCheat-1.0.4",
       "denikson-BepInExPack_Valheim-5.4.2350",
@@ -508,6 +511,7 @@
       "blacks7ar-LootParticlePlus-1.2.0",
       "blacks7ar-MagicBows-1.1.9",
       "blacks7ar-MagicPlugin-2.2.0",
+      "blacks7ar-OreMines-1.2.1",
       "blacks7ar-WeaponHolsterOverhaul-1.2.2",
       "catosaurluna-CatosAntiCheat-1.0.4",
       "denikson-BepInExPack_Valheim-5.4.2350",

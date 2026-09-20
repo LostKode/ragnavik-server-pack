@@ -1,6 +1,6 @@
 {
   "name": "Ragnavik",
-  "version_number": "1.1.26",
+  "version_number": "1.1.27",
   "website_url": "https://ragnavik.vercel.app",
   "description": "Ragnavik is currently in private testing. Public access is not open yet.",
   "dependencies": [
@@ -59,6 +59,7 @@
     "blacks7ar-LootParticlePlus-1.2.0",
     "blacks7ar-MagicBows-1.1.9",
     "blacks7ar-MagicPlugin-2.2.0",
+    "blacks7ar-OreMines-1.2.1",
     "blacks7ar-WeaponHolsterOverhaul-1.2.2",
     "JereKuusela-Item_Stand_All_Items-1.26.0",
     "KG-ItemDrawers-1.4.0",

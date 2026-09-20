@@ -1,6 +1,6 @@
 {
   "name": "Ragnavik_Server",
-  "version_number": "1.1.6",
+  "version_number": "1.1.7",
   "website_url": "https://ragnavik.vercel.app",
   "description": "Authoritative gameplay and synchronized configuration pack for the Ragnavik Valheim server.",
   "dependencies": [
@@ -38,6 +38,7 @@
     "blacks7ar-LootParticlePlus-1.2.0",
     "blacks7ar-MagicBows-1.1.9",
     "blacks7ar-MagicPlugin-2.2.0",
+    "blacks7ar-OreMines-1.2.1",
     "blacks7ar-WeaponHolsterOverhaul-1.2.2",
     "Digitalroot-Max_Dungeon_Rooms-2.0.39",
     "JereKuusela-Item_Stand_All_Items-1.26.0",

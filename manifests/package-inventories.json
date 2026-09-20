@@ -132,7 +132,8 @@
     ],
     "added_files": [
       "config/com.orianaventure.mod.WorldAdvancementProgression.cfg",
-      "config/org.bepinex.plugins.farming.cfg"
+      "config/org.bepinex.plugins.farming.cfg",
+      "config/org.bepinex.plugins.professions.cfg"
     ],
     "approved_removed_dependencies": [
       "KG-Marketplace_And_Server_NPCs_Revamped-10.0.0"
@@ -409,6 +410,7 @@
       "config/com.orianaventure.mod.LocationReset.cfg",
       "config/com.orianaventure.mod.WorldAdvancementProgression.cfg",
       "config/org.bepinex.plugins.farming.cfg",
+      "config/org.bepinex.plugins.professions.cfg",
       "config/randyknapp.mods.epicloot.cfg"
     ],
     "patcher_files": [],

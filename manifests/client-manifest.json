@@ -4,7 +4,7 @@
   "website_url": "https://ragnavik.vercel.app",
   "description": "Ragnavik is currently in private testing. Public access is not open yet.",
   "dependencies": [
-    "LostKode-Ragnavik_UI-1.2.9",
+    "LostKode-Ragnavik_UI-1.2.10",
     "LostKode-Ragnavik_Compatibility-1.0.1",
     "denikson-BepInExPack_Valheim-5.4.2350",
     "Advize-PlantEasily-2.2.0",

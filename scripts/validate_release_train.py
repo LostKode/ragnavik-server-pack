@@ -121,8 +121,8 @@ def validate(train_path: Path, check_blog: bool) -> dict:
         packages["catos_reporter"],
         policy["server_only"]["RagnavikCatosReporter"]["version"],
     )
-    if client_dependencies.get("LostKode-Ragnavik_Server") != server["version_number"]:
-        fail("effective client manifest does not pin the effective Server version")
+    if "LostKode-Ragnavik_Server" in client_dependencies:
+        fail("effective client manifest must not depend on the server-only Server package")
     subprocess.run(
         [sys.executable, str(ROOT / "scripts/generate_anticheat_policy.py"), "--check"],
         cwd=ROOT,

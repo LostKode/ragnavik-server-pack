@@ -36,14 +36,19 @@ def outputs() -> dict[Path, str]:
 
     server_package = f"LostKode-{server['name']}"
     client_deps = dict(split_dependency(item) for item in client["dependencies"])
-    expected_server_version = client_deps.pop(server_package, None)
-    if expected_server_version != server["version_number"]:
-        raise ValueError(
-            f"client must pin {server_package}-{server['version_number']}; got {expected_server_version!r}"
-        )
+    if server_package in client_deps:
+        raise ValueError(f"client must not depend on server-only package {server_package}")
+    server_deps = dict(split_dependency(item) for item in server["dependencies"])
+
+    mismatched_shared = sorted(
+        package for package in set(client_deps) & set(server_deps)
+        if client_deps[package] != server_deps[package]
+    )
+    if mismatched_shared:
+        raise ValueError(f"shared dependency version mismatch: {mismatched_shared}")
 
     mapped_packages = set(policy["client_only"])
-    actual_packages = set(client_deps)
+    actual_packages = set(client_deps) - set(server_deps)
     if mapped_packages != actual_packages:
         missing = sorted(actual_packages - mapped_packages)
         stale = sorted(mapped_packages - actual_packages)
@@ -52,7 +57,7 @@ def outputs() -> dict[Path, str]:
     extra_guids: list[str] = []
     for dependency in client["dependencies"]:
         package, _ = split_dependency(dependency)
-        if package != server_package:
+        if package in actual_packages:
             extra_guids.extend(policy["client_only"][package])
     for component in policy["client_embedded"].values():
         extra_guids.extend(component["guids"])
@@ -65,7 +70,6 @@ def outputs() -> dict[Path, str]:
     if len(extra_guids) != len(set(extra_guids)) or len(server_guids) != len(set(server_guids)):
         raise ValueError("duplicate plugin GUID in anti-cheat policy")
 
-    server_deps = dict(split_dependency(item) for item in server["dependencies"])
     for package, component in policy["server_only"].items():
         actual = server_deps.get(package)
         if actual != component["version"]:

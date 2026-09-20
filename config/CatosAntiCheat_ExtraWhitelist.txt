@@ -1,6 +1,7 @@
 # GENERATED: client-only plugins from the complete effective client manifest. Run scripts/generate_anticheat_policy.py.
 lostkode.ragnavik.ui
 advize.PlantEasily
+redseiko.valheim.chatter
 Azumatt.AzuAntiArthriticCrafting
 Azumatt.AAABuildMenu
 Azumatt.AllPlaceable
@@ -13,7 +14,6 @@ Azumatt.SaveCrossbowState
 Azumatt.TooltipExpansion
 Azumatt.TrueInstantLootDrop
 Azumatt.Unshamed
-redseiko.valheim.chatter
 neobotics.valheim_mod.hudcompass
 org.bepinex.patchers.shutup
 org.bepinex.plugins.soundofsilence

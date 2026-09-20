@@ -7,7 +7,6 @@ Azumatt.AllPlaceable
 Azumatt.AzuAreaRepair
 Azumatt.AzuClock
 Azumatt.BuildCameraCHE
-Azumatt.FastLink
 Azumatt.ItemCompare
 Azumatt.MouseTweaks
 Azumatt.SaveCrossbowState
@@ -16,7 +15,6 @@ Azumatt.TrueInstantLootDrop
 Azumatt.Unshamed
 redseiko.valheim.chatter
 neobotics.valheim_mod.hudcompass
-rdmods.custommainmenu
 org.bepinex.patchers.shutup
 org.bepinex.plugins.soundofsilence
 org.bepinex.plugins.steadyregeneration

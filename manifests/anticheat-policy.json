@@ -8,7 +8,6 @@
     "Azumatt-AzuAreaRepair": ["Azumatt.AzuAreaRepair"],
     "Azumatt-AzuClock": ["Azumatt.AzuClock"],
     "Azumatt-Build_Camera_Custom_Hammers_Edition": ["Azumatt.BuildCameraCHE"],
-    "Azumatt-FastLink": ["Azumatt.FastLink"],
     "Azumatt-ItemCompare": ["Azumatt.ItemCompare"],
     "Azumatt-MouseTweaks": ["Azumatt.MouseTweaks"],
     "Azumatt-SaveCrossbowState": ["Azumatt.SaveCrossbowState"],
@@ -17,7 +16,6 @@
     "Azumatt-Unshamed": ["Azumatt.Unshamed"],
     "ComfyMods-Chatter": ["redseiko.valheim.chatter"],
     "Neobotics-HUDCompass": ["neobotics.valheim_mod.hudcompass"],
-    "RDMods-CustomMainMenu": ["rdmods.custommainmenu"],
     "Smoothbrain-ShutUp": ["org.bepinex.patchers.shutup"],
     "Smoothbrain-SoundOfSilence": ["org.bepinex.plugins.soundofsilence"],
     "Smoothbrain-SteadyRegeneration": ["org.bepinex.plugins.steadyregeneration"]

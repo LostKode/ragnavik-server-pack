@@ -25,14 +25,6 @@
     "LostKode-Ragnavik_Server_Bridge": {
       "version": "1.0.4",
       "guids": ["lostkode.ragnavik.serverbridge"]
-    },
-    "Azumatt-MaxPlayerCount": {
-      "version": "1.2.6",
-      "guids": ["Azumatt.MaxPlayerCount"]
-    },
-    "Smoothbrain-Network": {
-      "version": "1.1.1",
-      "guids": ["org.bepinex.plugins.network"]
     }
   }
 }

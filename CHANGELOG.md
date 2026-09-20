@@ -2,6 +2,7 @@
 
 | Version | Changes |
 | --- | --- |
+| 1.1.10 | Update shared Afterdeath to 1.0.10, synchronize the stored Client Pack 1.1.29 manifest, and regenerate anti-cheat policy and inventories so Server Bridge is the only server-only package. |
 | 1.1.9 | Require Ragnavik Server Bridge 1.0.4 so progress and Catos notifications use their receiver-specific authentication headers. |
 | 1.1.8 | Require Ragnavik Server Bridge 1.0.3 to restore CatosAntiCheat mismatch and timeout notifications without invalid Harmony IL during startup. |
 | 1.1.7 | Add OreMines 1.2.1 as a shared client and server dependency so the replacement Ragnavik world generates progression-gated mining dungeons natively. |

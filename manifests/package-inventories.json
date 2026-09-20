@@ -131,9 +131,15 @@
       "blacks7ar-OreMines"
     ],
     "added_files": [
+      "config/Azumatt.HearthBelow.cfg",
+      "config/Azumatt_and_ValheimPlusDevs.PerfectPlacement.cfg",
+      "config/blacks7ar.LootParticlePlus.cfg",
       "config/com.orianaventure.mod.WorldAdvancementProgression.cfg",
+      "config/neobotics.valheim_mod.seidrchest.cfg",
       "config/org.bepinex.plugins.farming.cfg",
-      "config/org.bepinex.plugins.professions.cfg"
+      "config/org.bepinex.plugins.passivepowers.cfg",
+      "config/org.bepinex.plugins.professions.cfg",
+      "config/xyz.alcan.comfortcalc.cfg"
     ],
     "approved_removed_dependencies": [
       "KG-Marketplace_And_Server_NPCs_Revamped-10.0.0"
@@ -400,18 +406,24 @@
       "turbero-KillMeForMyPower-2.4.0"
     ],
     "config_files": [
+      "config/Azumatt.HearthBelow.cfg",
       "config/Azumatt.Recycle_N_Reclaim.cfg",
       "config/Azumatt.SleepSkip.cfg",
+      "config/Azumatt_and_ValheimPlusDevs.PerfectPlacement.cfg",
       "config/CatosAntiCheat_AdminWhitelist.txt",
       "config/CatosAntiCheat_ExtraWhitelist.txt",
       "config/CatosAntiCheat_ServerOnly.txt",
       "config/WackyMole.EpicMMOSystem.cfg",
+      "config/blacks7ar.LootParticlePlus.cfg",
       "config/com.catosvalheim.anticheat.cfg",
       "config/com.orianaventure.mod.LocationReset.cfg",
       "config/com.orianaventure.mod.WorldAdvancementProgression.cfg",
+      "config/neobotics.valheim_mod.seidrchest.cfg",
       "config/org.bepinex.plugins.farming.cfg",
+      "config/org.bepinex.plugins.passivepowers.cfg",
       "config/org.bepinex.plugins.professions.cfg",
-      "config/randyknapp.mods.epicloot.cfg"
+      "config/randyknapp.mods.epicloot.cfg",
+      "config/xyz.alcan.comfortcalc.cfg"
     ],
     "patcher_files": [],
     "plugin_files": [],

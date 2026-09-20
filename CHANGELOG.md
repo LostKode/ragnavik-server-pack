@@ -2,7 +2,7 @@
 
 | Version | Changes |
 | --- | --- |
-| 1.1.14 | Allow each player to pursue two professions. Permit profession changes once every 24 hours, reset an abandoned profession's level, and move the profession panel from P to F9 to avoid the TargetPortal map hotkey. Synchronize the policy across the Client and Server Packs. |
+| 1.1.14 | Allow each player to pursue two professions. Permit profession changes once every 24 hours and reset an abandoned profession's level. Resolve confirmed shared hotkey conflicts across Professions, Passive Powers, HearthBelow, SeidrChest, PerfectPlacement, ComfortTweaks, LootParticlePlus, and Farming, synchronized across the Client and Server Packs. |
 | 1.1.13 | Update shared CookingAdditions to 1.3.3, FloraCollector to 1.1.4, MagicPlugin to 2.2.1, and OdinsFoodBarrels to 1.2.9. Retain FineWoodPieces 1.6.6 because it is already the latest Hexium release. Update the stored Client Pack manifest to require Ragnavik UI 1.2.10, then regenerate the complete anti cheat policy and package inventories. Configure Farming to retain profession progression while PlantEasily owns planting grids and bulk harvesting, and PlantEverything owns growth display and biome restrictions. |
 | 1.1.12 | Require Ragnavik Server Bridge 1.0.5 so deferred HTTP deliveries report safe receiver validation details without exposing credentials or request payloads. |
 | 1.1.11 | Correct BoardersBumperBlurbs, GhostBuild, HildirsQuest, and SmartSkills to their available Hexium 1.0.3 releases so the full shared mod set installs on both clients and the server. |

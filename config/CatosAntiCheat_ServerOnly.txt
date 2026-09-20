@@ -1,4 +1,2 @@
 # GENERATED: server-only plugins from the complete effective server manifest. Run scripts/generate_anticheat_policy.py.
 lostkode.ragnavik.serverbridge
-Azumatt.MaxPlayerCount
-org.bepinex.plugins.network

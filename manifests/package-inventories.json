@@ -126,9 +126,12 @@
   },
   "diff": {
     "added_dependencies": [
+      "VentureValheim-World_Advancement_Progression",
       "ZenDragon-Zen_ModLib"
     ],
-    "added_files": [],
+    "added_files": [
+      "config/com.orianaventure.mod.WorldAdvancementProgression.cfg"
+    ],
     "approved_removed_dependencies": [
       "KG-Marketplace_And_Server_NPCs_Revamped-10.0.0"
     ],
@@ -244,6 +247,7 @@
       "ValheimModding-Jotunn-2.30.1",
       "VentureValheim-Venture_Location_Reset-1.0.0",
       "VentureValheim-Warm_Torches-1.0.0",
+      "VentureValheim-World_Advancement_Progression-1.0.0",
       "WackyMole-WackyEpicMMOSystem-1.9.68",
       "ZenDragon-ZenRaids-1.2.0",
       "ZenDragon-Zen_ModLib-1.14.7",
@@ -369,6 +373,7 @@
       "ValheimModding-Jotunn-2.30.1",
       "VentureValheim-Venture_Location_Reset-1.0.0",
       "VentureValheim-Warm_Torches-1.0.0",
+      "VentureValheim-World_Advancement_Progression-1.0.0",
       "WackyMole-WackyEpicMMOSystem-1.9.68",
       "ZenDragon-ZenRaids-1.2.0",
       "ZenDragon-Zen_ModLib-1.14.7",
@@ -398,6 +403,7 @@
       "config/WackyMole.EpicMMOSystem.cfg",
       "config/com.catosvalheim.anticheat.cfg",
       "config/com.orianaventure.mod.LocationReset.cfg",
+      "config/com.orianaventure.mod.WorldAdvancementProgression.cfg",
       "config/randyknapp.mods.epicloot.cfg"
     ],
     "patcher_files": [],
@@ -488,6 +494,7 @@
       "ValheimModding-Jotunn-2.30.1",
       "VentureValheim-Venture_Location_Reset-1.0.0",
       "VentureValheim-Warm_Torches-1.0.0",
+      "VentureValheim-World_Advancement_Progression-1.0.0",
       "WackyMole-WackyEpicMMOSystem-1.9.68",
       "ZenDragon-ZenRaids-1.2.0",
       "ZenDragon-Zen_ModLib-1.14.7",

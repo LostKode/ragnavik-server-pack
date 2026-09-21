@@ -1,1 +1,2 @@
-# Add approved admin-only plugin GUIDs here. Empty by default.
+# Approved admin-only plugin GUIDs. These are not permitted for normal players.
+server_devcommands

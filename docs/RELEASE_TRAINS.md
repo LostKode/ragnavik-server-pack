@@ -23,15 +23,15 @@ Cross-repository dispatch requires the organization secret `RAGNAVIK_RELEASE_TOK
 3. Run the Progress workflow when the server runtime or server-only policy will require a new Progress version.
 4. Run the Sleep Timer workflow when its plugin changes.
 5. Run the Catos Reporter workflow when its server-only companion changes. A Reporter release must include Server and Client releases so the server-only anti-cheat policy stays synchronized.
-6. After every changed standalone package is publicly verified, update and run the Server workflow with exact dependency and anti-cheat policy versions.
-7. After the Server package is publicly verified, update and run the Client workflow with exact Server and UI dependency versions.
+6. Publish and verify Shared before either side-specific pack, then update and run the Server workflow with exact Shared and anti-cheat policy versions.
+7. Update and run the Client workflow with the exact public Shared and UI versions. Client does not depend on Server.
 8. Only after all required package workflows report public verification may the separately approved production deployment begin.
 
 The normal order is:
 
-`UI / Progress / Sleep Timer / Catos Reporter -> Server -> Client -> production deployment`
+`UI and Shared -> Server and Client -> production deployment`
 
-UI, Progress, Sleep Timer, and Catos Reporter may run in parallel because they do not depend on one another. Server must wait for every standalone package version it references. Client must wait for Server and UI.
+UI and Shared may be prepared independently. Server and Client must both wait for the exact Shared version to be publicly verified. Client also waits for UI, but does not wait for Server.
 
 ## Production gate
 

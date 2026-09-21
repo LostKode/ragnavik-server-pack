@@ -6,6 +6,7 @@ Ragnavik uses these exact identities and artifact prefixes:
 
 | Package | Identity and ZIP prefix |
 | --- | --- |
+| Shared pack | `LostKode-Ragnavik_Shared` |
 | Client pack | `LostKode-Ragnavik` |
 | Server pack | `LostKode-Ragnavik_Server` |
 | UI plugin | `LostKode-Ragnavik_UI` |

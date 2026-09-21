@@ -45,6 +45,20 @@ APPROVED_REMOVED_FILES = {
 }
 
 
+SHARED_CONFIG_FILES = {
+    "config/Azumatt.HearthBelow.cfg",
+    "config/Azumatt.MaxPlayerCount.cfg",
+    "config/Azumatt.SleepSkip.cfg",
+    "config/Azumatt_and_ValheimPlusDevs.PerfectPlacement.cfg",
+    "config/blacks7ar.LootParticlePlus.cfg",
+    "config/neobotics.valheim_mod.seidrchest.cfg",
+    "config/org.bepinex.plugins.farming.cfg",
+    "config/org.bepinex.plugins.passivepowers.cfg",
+    "config/org.bepinex.plugins.professions.cfg",
+    "config/randyknapp.mods.epicloot.cfg",
+    "config/xyz.alcan.comfortcalc.cfg",
+}
+
 def split_dependency(value: str) -> str:
     return value.rsplit("-", 1)[0]
 
@@ -69,14 +83,21 @@ def inventory() -> dict:
     before_manifest = json.loads(base_file("manifest.json"))
     server = json.loads((ROOT / "manifest.json").read_text(encoding="utf-8"))
     client = json.loads((ROOT / "manifests/client-manifest.json").read_text(encoding="utf-8"))
+    shared = json.loads((ROOT / "manifests/shared-manifest.json").read_text(encoding="utf-8"))
+    shared_package = f"LostKode-{shared['name']}"
     before_names = {split_dependency(item) for item in before_manifest["dependencies"]}
-    proposed_names = {split_dependency(item) for item in server["dependencies"]}
+    proposed_names = {
+        split_dependency(item)
+        for item in shared["dependencies"] + server["dependencies"]
+        if split_dependency(item) != shared_package
+    }
     removed = sorted(before_names - proposed_names)
     unapproved = sorted(set(removed) - APPROVED_REMOVALS)
     if unapproved:
         raise ValueError(f"unapproved dependency removals: {unapproved}")
     before_files = set(base_files("config") + base_files("plugins") + base_files("patchers"))
-    proposed_files = set(current_files("config") + current_files("plugins") + current_files("patchers"))
+    server_files = set(current_files("config") + current_files("plugins") + current_files("patchers"))
+    proposed_files = server_files | SHARED_CONFIG_FILES
     removed_files = sorted(before_files - proposed_files)
     unapproved_files = sorted(set(removed_files) - APPROVED_REMOVED_FILES)
     if unapproved_files:
@@ -92,9 +113,18 @@ def inventory() -> dict:
         },
         "proposed": {
             "server_dependencies": sorted(server["dependencies"]),
+            "shared_dependencies": sorted(shared["dependencies"]),
             "client_direct_dependencies": sorted(client["dependencies"]),
-            "client_effective_dependencies": sorted(set(server["dependencies"] + client["dependencies"])),
-            "config_files": current_files("config"),
+            "client_effective_dependencies": sorted({
+                item for item in shared["dependencies"] + client["dependencies"]
+                if split_dependency(item) != shared_package
+            }),
+            "server_effective_dependencies": sorted({
+                item for item in shared["dependencies"] + server["dependencies"]
+                if split_dependency(item) != shared_package
+            }),
+            "server_config_files": current_files("config"),
+            "shared_config_files": sorted(SHARED_CONFIG_FILES),
             "plugin_files": current_files("plugins"),
             "patcher_files": current_files("patchers"),
             "assets": ["LICENSE", "THIRD_PARTY_NOTICES.md", "icon.png"],

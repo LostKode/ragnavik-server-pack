@@ -2,6 +2,7 @@
 
 | Version | Changes |
 | --- | --- |
+| 1.1.19 | Depend on Ragnavik Shared for synchronized gameplay mods. Retain Network and Server Bridge as dedicated-server-only dependencies so they no longer execute on player clients. |
 | 1.1.18 | Move OdinBear Black Bear spawns from the Meadows to the Black Forest and keep Wild Spirit Necks away from Black Forest biome edges so the starting biome remains safe for early progression. |
 | 1.1.17 | Disable World Advancement Progression equipment locking so starter and normally acquired equipment, including the Wooden Mace, can be used immediately while personal boss, raid, and spawn progression remain enabled. |
 | 1.1.16 | Award Epic MMO experience for red and blue enemies so players receive experience from any enemy they can defeat. |

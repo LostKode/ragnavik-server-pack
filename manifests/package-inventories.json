@@ -126,6 +126,7 @@
   },
   "diff": {
     "added_dependencies": [
+      "Smoothbrain-DedicatedServer",
       "VentureValheim-World_Advancement_Progression",
       "ZenDragon-Zen_ModLib",
       "blacks7ar-OreMines"
@@ -253,6 +254,7 @@
       "Smoothbrain-ComfortTweaks-3.3.11",
       "Smoothbrain-Cooking-1.2.3",
       "Smoothbrain-DarwinAwards-1.0.7",
+      "Smoothbrain-DedicatedServer-1.0.3",
       "Smoothbrain-DualWield-1.0.11",
       "Smoothbrain-Evasion-1.0.5",
       "Smoothbrain-Exploration-1.0.5",
@@ -385,6 +387,7 @@
       "Smoothbrain-ComfortTweaks-3.3.11",
       "Smoothbrain-Cooking-1.2.3",
       "Smoothbrain-DarwinAwards-1.0.7",
+      "Smoothbrain-DedicatedServer-1.0.3",
       "Smoothbrain-DualWield-1.0.11",
       "Smoothbrain-Evasion-1.0.5",
       "Smoothbrain-Exploration-1.0.5",
@@ -505,6 +508,7 @@
       "Smoothbrain-ComfortTweaks-3.3.11",
       "Smoothbrain-Cooking-1.2.3",
       "Smoothbrain-DarwinAwards-1.0.7",
+      "Smoothbrain-DedicatedServer-1.0.3",
       "Smoothbrain-DualWield-1.0.11",
       "Smoothbrain-Evasion-1.0.5",
       "Smoothbrain-Exploration-1.0.5",

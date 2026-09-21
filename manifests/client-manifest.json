@@ -1,11 +1,11 @@
 {
   "name": "Ragnavik",
-  "version_number": "1.1.32",
+  "version_number": "1.1.34",
   "website_url": "https://ragnavik.vercel.app",
   "description": "Ragnavik is currently in private testing. Public access is not open yet.",
   "dependencies": [
-    "LostKode-Ragnavik_UI-1.2.10",
-    "LostKode-Ragnavik_Compatibility-1.0.1",
+    "LostKode-Ragnavik_UI-1.2.13",
+    "LostKode-Ragnavik_Compatibility-1.0.3",
     "denikson-BepInExPack_Valheim-5.4.2350",
     "Advize-PlantEasily-2.2.0",
     "Advize-PlantEverything-1.21.2",
@@ -83,7 +83,7 @@
     "OdinPlus-OdinHorse-1.7.2",
     "OdinPlus-OdinsFoodBarrels-1.2.9",
     "OdinPlus-OdinsHorsePen-1.1.2",
-    "OdinPlus-OdinsKingdom-1.6.0",
+    "OdinPlus-OdinsKingdom-1.6.1",
     "OdinPlus-OdinsTraps-1.1.23",
     "OdinPlus-OdinsUndercroft-1.3.5",
     "OdinPlus-PotionPlus-4.3.4",
@@ -127,6 +127,6 @@
     "ValheimModding-Jotunn-2.30.1",
     "WackyMole-WackyEpicMMOSystem-1.9.68",
     "ZenDragon-ZenRaids-1.2.0",
-    "ZenDragon-Zen_ModLib-1.14.7"
+    "ZenDragon-Zen_ModLib-1.14.8"
   ]
 }

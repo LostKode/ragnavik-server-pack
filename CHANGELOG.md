@@ -2,6 +2,7 @@
 
 | Version | Changes |
 | --- | --- |
+| 1.1.18 | Move OdinBear Black Bear spawns from the Meadows to the Black Forest and keep Wild Spirit Necks away from Black Forest biome edges so the starting biome remains safe for early progression. |
 | 1.1.17 | Disable World Advancement Progression equipment locking so starter and normally acquired equipment, including the Wooden Mace, can be used immediately while personal boss, raid, and spawn progression remain enabled. |
 | 1.1.16 | Award Epic MMO experience for red and blue enemies so players receive experience from any enemy they can defeat. |
 | 1.1.15 | Start server capacity at 15 players. Require sequential personal boss progression without world-age bypasses, isolate ZenRaids player keys, limit Epic MMO death experience loss to 5 percent, configure protected wisp recovery and group resurrection, and allow all players to recycle at the existing 50 percent return rate. Update Ragnavik Compatibility to 1.0.3, Odin's Kingdom to 1.6.1, and Zen ModLib to 1.14.8. Retain FineWoodPieces 1.6.6 until its newer release is available on Hexium. |

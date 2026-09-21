@@ -131,7 +131,6 @@
       "blacks7ar-OreMines"
     ],
     "added_files": [
-      "config/Azumatt.HearthBelow.cfg",
       "config/Azumatt.MaxPlayerCount.cfg",
       "config/Azumatt_and_ValheimPlusDevs.PerfectPlacement.cfg",
       "config/GraveBear.BottledNeck.cfg",
@@ -148,6 +147,8 @@
       "config/xyz.alcan.comfortcalc.cfg"
     ],
     "approved_removed_dependencies": [
+      "Azumatt-GhostBuild",
+      "Azumatt-HearthBelow",
       "KG-Marketplace_And_Server_NPCs_Revamped-10.0.0"
     ],
     "approved_removed_files": []
@@ -173,7 +174,7 @@
       "Azumatt-TrueInstantLootDrop-1.0.5",
       "Azumatt-Unshamed-1.0.6",
       "ComfyMods-Chatter-2.13.0",
-      "LostKode-Ragnavik_Shared-1.0.3",
+      "LostKode-Ragnavik_Shared-1.0.4",
       "LostKode-Ragnavik_UI-1.2.13",
       "Neobotics-HUDCompass-1.2.0",
       "Smoothbrain-ShutUp-1.0.2",
@@ -195,9 +196,7 @@
       "Azumatt-Build_Camera_Custom_Hammers_Edition-1.3.3",
       "Azumatt-CurrencyPocket-1.0.15",
       "Azumatt-FirstPersonMode-1.4.0",
-      "Azumatt-GhostBuild-1.0.3",
       "Azumatt-HaulersHelper-1.0.6",
-      "Azumatt-HearthBelow-0.6.2",
       "Azumatt-Hooked-1.1.2",
       "Azumatt-ItemCompare-1.0.11",
       "Azumatt-MaxPlayerCount-1.2.6",
@@ -324,7 +323,7 @@
     ],
     "server_dependencies": [
       "LostKode-Ragnavik_Server_Bridge-1.0.5",
-      "LostKode-Ragnavik_Shared-1.0.3",
+      "LostKode-Ragnavik_Shared-1.0.4",
       "Smoothbrain-Network-1.1.1"
     ],
     "server_effective_dependencies": [
@@ -335,9 +334,7 @@
       "Azumatt-BoardersBumperBlurbs-1.0.3",
       "Azumatt-CurrencyPocket-1.0.15",
       "Azumatt-FirstPersonMode-1.4.0",
-      "Azumatt-GhostBuild-1.0.3",
       "Azumatt-HaulersHelper-1.0.6",
-      "Azumatt-HearthBelow-0.6.2",
       "Azumatt-Hooked-1.1.2",
       "Azumatt-MaxPlayerCount-1.2.6",
       "Azumatt-PerfectPlacement-1.2.4",
@@ -436,7 +433,6 @@
       "turbero-KillMeForMyPower-2.4.0"
     ],
     "shared_config_files": [
-      "config/Azumatt.HearthBelow.cfg",
       "config/Azumatt.MaxPlayerCount.cfg",
       "config/Azumatt.SleepSkip.cfg",
       "config/Azumatt_and_ValheimPlusDevs.PerfectPlacement.cfg",
@@ -456,9 +452,7 @@
       "Azumatt-BoardersBumperBlurbs-1.0.3",
       "Azumatt-CurrencyPocket-1.0.15",
       "Azumatt-FirstPersonMode-1.4.0",
-      "Azumatt-GhostBuild-1.0.3",
       "Azumatt-HaulersHelper-1.0.6",
-      "Azumatt-HearthBelow-0.6.2",
       "Azumatt-Hooked-1.1.2",
       "Azumatt-MaxPlayerCount-1.2.6",
       "Azumatt-PerfectPlacement-1.2.4",

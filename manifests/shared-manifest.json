@@ -1,6 +1,6 @@
 {
   "name": "Ragnavik_Shared",
-  "version_number": "1.0.3",
+  "version_number": "1.0.4",
   "website_url": "https://ragnavik.vercel.app",
   "description": "Shared gameplay dependencies and synchronized configuration for Ragnavik clients and servers.",
   "dependencies": [
@@ -21,9 +21,7 @@
     "Azumatt-BoardersBumperBlurbs-1.0.3",
     "Azumatt-CurrencyPocket-1.0.15",
     "Azumatt-FirstPersonMode-1.4.0",
-    "Azumatt-GhostBuild-1.0.3",
     "Azumatt-HaulersHelper-1.0.6",
-    "Azumatt-HearthBelow-0.6.2",
     "Azumatt-Hooked-1.1.2",
     "Azumatt-MaxPlayerCount-1.2.6",
     "Azumatt-PerfectPlacement-1.2.4",

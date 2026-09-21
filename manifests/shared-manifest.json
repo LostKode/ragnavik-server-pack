@@ -1,6 +1,6 @@
 {
   "name": "Ragnavik_Shared",
-  "version_number": "1.0.7",
+  "version_number": "1.0.8",
   "website_url": "https://ragnavik.vercel.app",
   "description": "Shared gameplay dependencies and synchronized configuration for Ragnavik clients and servers.",
   "dependencies": [
@@ -10,7 +10,7 @@
     "Advize-PlantEverything-1.21.2",
     "catosaurluna-CatosAntiCheat-1.0.4",
     "Digitalroot-Max_Dungeon_Rooms-2.0.39",
-    "RandyKnapp-EpicLoot-0.14.10",
+    "RandyKnapp-EpicLoot-0.14.11",
     "shudnal-MoreGatesExtended-1.0.5",
     "Therzie-Warfare-1.9.2",
     "VentureValheim-Venture_Location_Reset-1.0.0",
@@ -103,7 +103,7 @@
     "Smoothbrain-StartupAccelerator-1.0.4",
     "Smoothbrain-TargetPortal-1.2.6",
     "turbero-KillMeForMyPower-2.5.0",
-    "ValheimModding-Jotunn-2.30.1",
+    "ValheimModding-Jotunn-2.30.2",
     "WackyMole-WackyEpicMMOSystem-1.9.68",
     "ZenDragon-ZenRaids-1.2.0",
     "ZenDragon-Zen_ModLib-1.14.8"

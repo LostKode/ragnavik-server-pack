@@ -1,30 +1,76 @@
 {
   "client_only": {
-    "LostKode-Ragnavik_UI": ["lostkode.ragnavik.ui"],
-    "Advize-PlantEasily": ["advize.PlantEasily"],
-    "Azumatt-AAA_Crafting": ["Azumatt.AzuAntiArthriticCrafting"],
-    "Azumatt-AAABuildMenu": ["Azumatt.AAABuildMenu"],
-    "Azumatt-AllPlaceable": ["Azumatt.AllPlaceable"],
-    "Azumatt-AzuAreaRepair": ["Azumatt.AzuAreaRepair"],
-    "Azumatt-AzuClock": ["Azumatt.AzuClock"],
-    "Azumatt-Build_Camera_Custom_Hammers_Edition": ["Azumatt.BuildCameraCHE"],
-    "Azumatt-ItemCompare": ["Azumatt.ItemCompare"],
-    "Azumatt-MouseTweaks": ["Azumatt.MouseTweaks"],
-    "Azumatt-SaveCrossbowState": ["Azumatt.SaveCrossbowState"],
-    "Azumatt-TooltipExpansion": ["Azumatt.TooltipExpansion"],
-    "Azumatt-TrueInstantLootDrop": ["Azumatt.TrueInstantLootDrop"],
-    "Azumatt-Unshamed": ["Azumatt.Unshamed"],
-    "ComfyMods-Chatter": ["redseiko.valheim.chatter"],
-    "Neobotics-HUDCompass": ["neobotics.valheim_mod.hudcompass"],
-    "Smoothbrain-ShutUp": ["org.bepinex.patchers.shutup"],
-    "Smoothbrain-SoundOfSilence": ["org.bepinex.plugins.soundofsilence"],
-    "Smoothbrain-SteadyRegeneration": ["org.bepinex.plugins.steadyregeneration"]
+    "LostKode-Ragnavik_UI": [
+      "lostkode.ragnavik.ui"
+    ],
+    "Advize-PlantEasily": [
+      "advize.PlantEasily"
+    ],
+    "Azumatt-AAA_Crafting": [
+      "Azumatt.AzuAntiArthriticCrafting"
+    ],
+    "Azumatt-AAABuildMenu": [
+      "Azumatt.AAABuildMenu"
+    ],
+    "Azumatt-AllPlaceable": [
+      "Azumatt.AllPlaceable"
+    ],
+    "Azumatt-AzuAreaRepair": [
+      "Azumatt.AzuAreaRepair"
+    ],
+    "Azumatt-AzuClock": [
+      "Azumatt.AzuClock"
+    ],
+    "Azumatt-Build_Camera_Custom_Hammers_Edition": [
+      "Azumatt.BuildCameraCHE"
+    ],
+    "Azumatt-ItemCompare": [
+      "Azumatt.ItemCompare"
+    ],
+    "Azumatt-MouseTweaks": [
+      "Azumatt.MouseTweaks"
+    ],
+    "Azumatt-SaveCrossbowState": [
+      "Azumatt.SaveCrossbowState"
+    ],
+    "Azumatt-TooltipExpansion": [
+      "Azumatt.TooltipExpansion"
+    ],
+    "Azumatt-TrueInstantLootDrop": [
+      "Azumatt.TrueInstantLootDrop"
+    ],
+    "Azumatt-Unshamed": [
+      "Azumatt.Unshamed"
+    ],
+    "ComfyMods-Chatter": [
+      "redseiko.valheim.chatter"
+    ],
+    "Neobotics-HUDCompass": [
+      "neobotics.valheim_mod.hudcompass"
+    ],
+    "Smoothbrain-ShutUp": [
+      "org.bepinex.patchers.shutup"
+    ],
+    "Smoothbrain-SoundOfSilence": [
+      "org.bepinex.plugins.soundofsilence"
+    ],
+    "Smoothbrain-SteadyRegeneration": [
+      "org.bepinex.plugins.steadyregeneration"
+    ]
   },
   "client_embedded": {},
   "server_only": {
     "LostKode-Ragnavik_Server_Bridge": {
       "version": "1.0.5",
-      "guids": ["lostkode.ragnavik.serverbridge"]
+      "guids": [
+        "lostkode.ragnavik.serverbridge"
+      ]
+    },
+    "Smoothbrain-Network": {
+      "version": "1.1.1",
+      "guids": [
+        "org.bepinex.plugins.network"
+      ]
     }
   }
 }

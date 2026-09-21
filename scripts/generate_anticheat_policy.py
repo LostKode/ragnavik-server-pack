@@ -32,13 +32,29 @@ def render(title: str, guids: list[str]) -> str:
 def outputs() -> dict[Path, str]:
     server = load(ROOT / "manifest.json")
     client = load(ROOT / "manifests/client-manifest.json")
+    shared = load(ROOT / "manifests/shared-manifest.json")
     policy = load(ROOT / "manifests/anticheat-policy.json")
 
     server_package = f"LostKode-{server['name']}"
-    client_deps = dict(split_dependency(item) for item in client["dependencies"])
-    if server_package in client_deps:
+    shared_package = f"LostKode-{shared['name']}"
+    client_direct = dict(split_dependency(item) for item in client["dependencies"])
+    server_direct = dict(split_dependency(item) for item in server["dependencies"])
+    expected_shared_version = shared["version_number"]
+    if client_direct.get(shared_package) != expected_shared_version:
+        raise ValueError("client must require the stored Shared manifest version")
+    if server_direct.get(shared_package) != expected_shared_version:
+        raise ValueError("server must require the stored Shared manifest version")
+    if server_package in client_direct:
         raise ValueError(f"client must not depend on server-only package {server_package}")
-    server_deps = dict(split_dependency(item) for item in server["dependencies"])
+    shared_deps = dict(split_dependency(item) for item in shared["dependencies"])
+    client_deps = {
+        **shared_deps,
+        **{package: version for package, version in client_direct.items() if package != shared_package},
+    }
+    server_deps = {
+        **shared_deps,
+        **{package: version for package, version in server_direct.items() if package != shared_package},
+    }
 
     mismatched_shared = sorted(
         package for package in set(client_deps) & set(server_deps)
@@ -53,6 +69,13 @@ def outputs() -> dict[Path, str]:
         missing = sorted(actual_packages - mapped_packages)
         stale = sorted(mapped_packages - actual_packages)
         raise ValueError(f"client-only mapping mismatch; missing={missing}, stale={stale}")
+
+    actual_server_only = set(server_deps) - set(client_deps)
+    mapped_server_only = set(policy["server_only"])
+    if mapped_server_only != actual_server_only:
+        missing = sorted(actual_server_only - mapped_server_only)
+        stale = sorted(mapped_server_only - actual_server_only)
+        raise ValueError(f"server-only mapping mismatch; missing={missing}, stale={stale}")
 
     extra_guids: list[str] = []
     for dependency in client["dependencies"]:

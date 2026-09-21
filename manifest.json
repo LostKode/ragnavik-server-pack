@@ -1,6 +1,6 @@
 {
   "name": "Ragnavik_Server",
-  "version_number": "1.1.16",
+  "version_number": "1.1.17",
   "website_url": "https://ragnavik.vercel.app",
   "description": "Authoritative gameplay and synchronized configuration pack for the Ragnavik Valheim server.",
   "dependencies": [

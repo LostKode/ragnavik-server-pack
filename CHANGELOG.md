@@ -2,6 +2,7 @@
 
 | Version | Changes |
 | --- | --- |
+| 1.1.24 | Require Ragnavik Shared 1.0.6, adding Ragnavik Gameplay 1.0.0 and the personalized starter chest at the StartTemple. Regenerate the complete package inventory against Client Pack 1.1.40. |
 | 1.1.23 | Require Ragnavik Shared 1.0.5 with Ragnavik Compatibility 1.0.7 so Afterdeath wisps can cross dungeon transitions and use existing portals during corpse recovery. Regenerate the complete package inventory and anti-cheat policy against Client Pack 1.1.39. |
 | 1.1.22 | Require Ragnavik Shared 1.0.4, which removes GhostBuild and HearthBelow after isolated testing confirmed client frame-rate and terrain-rendering regressions. |
 | 1.1.21 | Require Ragnavik Shared 1.0.3, which removes DedicatedServer 1.0.3 to restore normal simulation ownership and reduce performance issues. |

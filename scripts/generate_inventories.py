@@ -35,6 +35,7 @@ APPROVED_REMOVALS = {
     "blacks7ar-MagicRevamp",
     "ishid4-BetterArchery",
     "shudnal-ProtectiveWards",
+    "Smoothbrain-DedicatedServer",
 }
 APPROVED_REMOVED_FILES = {
     "config/XPortalNetworks/xportal_networks.json",

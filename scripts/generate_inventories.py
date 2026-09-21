@@ -36,6 +36,8 @@ APPROVED_REMOVALS = {
     "ishid4-BetterArchery",
     "shudnal-ProtectiveWards",
     "Smoothbrain-DedicatedServer",
+    "Azumatt-GhostBuild",
+    "Azumatt-HearthBelow",
 }
 APPROVED_REMOVED_FILES = {
     "config/XPortalNetworks/xportal_networks.json",
@@ -43,11 +45,11 @@ APPROVED_REMOVED_FILES = {
     "config/vapok.mods.shieldmebruh.cfg",
     "config/vapok.mods.xportalnetworks.cfg",
     "plugins/RagnavikEpicMMOReloadGuard/RagnavikEpicMMOReloadGuard.dll",
+    "config/Azumatt.HearthBelow.cfg",
 }
 
 
 SHARED_CONFIG_FILES = {
-    "config/Azumatt.HearthBelow.cfg",
     "config/Azumatt.MaxPlayerCount.cfg",
     "config/Azumatt.SleepSkip.cfg",
     "config/Azumatt_and_ValheimPlusDevs.PerfectPlacement.cfg",

@@ -2,6 +2,7 @@
 
 | Version | Changes |
 | --- | --- |
+| 1.1.16 | Award Epic MMO experience for red and blue enemies so players receive experience from any enemy they can defeat. |
 | 1.1.15 | Start server capacity at 15 players. Require sequential personal boss progression without world-age bypasses, isolate ZenRaids player keys, limit Epic MMO death experience loss to 5 percent, configure protected wisp recovery and group resurrection, and allow all players to recycle at the existing 50 percent return rate. Update Ragnavik Compatibility to 1.0.3, Odin's Kingdom to 1.6.1, and Zen ModLib to 1.14.8. Retain FineWoodPieces 1.6.6 until its newer release is available on Hexium. |
 | 1.1.14 | Allow each player to pursue two professions. Permit profession changes once every 24 hours and reset an abandoned profession's level. Resolve confirmed shared hotkey conflicts across Professions, Passive Powers, HearthBelow, SeidrChest, PerfectPlacement, ComfortTweaks, LootParticlePlus, and Farming, synchronized across the Client and Server Packs. |
 | 1.1.13 | Update shared CookingAdditions to 1.3.3, FloraCollector to 1.1.4, MagicPlugin to 2.2.1, and OdinsFoodBarrels to 1.2.9. Retain FineWoodPieces 1.6.6 because it is already the latest Hexium release. Update the stored Client Pack manifest to require Ragnavik UI 1.2.10, then regenerate the complete anti cheat policy and package inventories. Configure Farming to retain profession progression while PlantEasily owns planting grids and bulk harvesting, and PlantEverything owns growth display and biome restrictions. |

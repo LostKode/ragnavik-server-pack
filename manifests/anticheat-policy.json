@@ -61,7 +61,7 @@
   "client_embedded": {},
   "server_only": {
     "LostKode-Ragnavik_Server_Bridge": {
-      "version": "1.0.5",
+      "version": "1.0.6",
       "guids": [
         "lostkode.ragnavik.serverbridge"
       ]

@@ -173,9 +173,9 @@
       "Azumatt-SaveCrossbowState-1.0.4",
       "Azumatt-TooltipExpansion-1.1.1",
       "Azumatt-TrueInstantLootDrop-1.0.5",
-      "Azumatt-Unshamed-1.0.6",
+      "Azumatt-Unshamed-1.0.7",
       "ComfyMods-Chatter-2.13.0",
-      "LostKode-Ragnavik_Shared-1.0.6",
+      "LostKode-Ragnavik_Shared-1.0.7",
       "LostKode-Ragnavik_UI-1.2.13",
       "Neobotics-HUDCompass-1.2.0",
       "Smoothbrain-ShutUp-1.0.2",
@@ -212,14 +212,14 @@
       "Azumatt-SleepSkip-1.3.2",
       "Azumatt-TooltipExpansion-1.1.1",
       "Azumatt-TrueInstantLootDrop-1.0.5",
-      "Azumatt-Unshamed-1.0.6",
+      "Azumatt-Unshamed-1.0.7",
       "Azumatt-WardIsLove-4.0.2",
       "ComfyMods-Chatter-2.13.0",
       "Digitalroot-Max_Dungeon_Rooms-2.0.39",
       "JereKuusela-Item_Stand_All_Items-1.26.0",
       "KG-ItemDrawers-1.4.0",
       "LostKode-Ragnavik_Compatibility-1.0.7",
-      "LostKode-Ragnavik_Gameplay-1.0.0",
+      "LostKode-Ragnavik_Gameplay-1.0.1",
       "LostKode-Ragnavik_UI-1.2.13",
       "Marlthon-AirAnimals-0.3.1",
       "Marlthon-OdinMounts-0.1.5",
@@ -235,10 +235,10 @@
       "OdinPlus-GoodestBoy-0.3.7",
       "OdinPlus-HedgeWalls-1.0.16",
       "OdinPlus-OdinArchitect-1.7.5",
-      "OdinPlus-OdinBanners-1.1.12",
+      "OdinPlus-OdinBanners-1.1.14",
       "OdinPlus-OdinBear-1.4.9",
       "OdinPlus-OdinCampsite-1.6.5",
-      "OdinPlus-OdinHorse-1.7.2",
+      "OdinPlus-OdinHorse-1.7.3",
       "OdinPlus-OdinsFoodBarrels-1.2.9",
       "OdinPlus-OdinsHorsePen-1.1.2",
       "OdinPlus-OdinsKingdom-1.6.1",
@@ -304,7 +304,7 @@
       "denikson-BepInExPack_Valheim-5.4.2350",
       "shudnal-MoreGatesExtended-1.0.5",
       "sighsorry-Dive_In-1.2.3",
-      "turbero-KillMeForMyPower-2.4.0"
+      "turbero-KillMeForMyPower-2.5.0"
     ],
     "patcher_files": [],
     "plugin_files": [],
@@ -324,8 +324,8 @@
       "config/org.bepinex.plugins.resurrection.cfg"
     ],
     "server_dependencies": [
-      "LostKode-Ragnavik_Server_Bridge-1.0.5",
-      "LostKode-Ragnavik_Shared-1.0.6",
+      "LostKode-Ragnavik_Server_Bridge-1.0.6",
+      "LostKode-Ragnavik_Shared-1.0.7",
       "Smoothbrain-Network-1.1.1"
     ],
     "server_effective_dependencies": [
@@ -351,8 +351,8 @@
       "JereKuusela-Item_Stand_All_Items-1.26.0",
       "KG-ItemDrawers-1.4.0",
       "LostKode-Ragnavik_Compatibility-1.0.7",
-      "LostKode-Ragnavik_Gameplay-1.0.0",
-      "LostKode-Ragnavik_Server_Bridge-1.0.5",
+      "LostKode-Ragnavik_Gameplay-1.0.1",
+      "LostKode-Ragnavik_Server_Bridge-1.0.6",
       "Marlthon-AirAnimals-0.3.1",
       "Marlthon-OdinMounts-0.1.5",
       "Marlthon-OdinShip-0.8.1",
@@ -366,10 +366,10 @@
       "OdinPlus-GoodestBoy-0.3.7",
       "OdinPlus-HedgeWalls-1.0.16",
       "OdinPlus-OdinArchitect-1.7.5",
-      "OdinPlus-OdinBanners-1.1.12",
+      "OdinPlus-OdinBanners-1.1.14",
       "OdinPlus-OdinBear-1.4.9",
       "OdinPlus-OdinCampsite-1.6.5",
-      "OdinPlus-OdinHorse-1.7.2",
+      "OdinPlus-OdinHorse-1.7.3",
       "OdinPlus-OdinsFoodBarrels-1.2.9",
       "OdinPlus-OdinsHorsePen-1.1.2",
       "OdinPlus-OdinsKingdom-1.6.1",
@@ -433,7 +433,7 @@
       "denikson-BepInExPack_Valheim-5.4.2350",
       "shudnal-MoreGatesExtended-1.0.5",
       "sighsorry-Dive_In-1.2.3",
-      "turbero-KillMeForMyPower-2.4.0"
+      "turbero-KillMeForMyPower-2.5.0"
     ],
     "shared_config_files": [
       "config/Azumatt.MaxPlayerCount.cfg",
@@ -470,7 +470,7 @@
       "JereKuusela-Item_Stand_All_Items-1.26.0",
       "KG-ItemDrawers-1.4.0",
       "LostKode-Ragnavik_Compatibility-1.0.7",
-      "LostKode-Ragnavik_Gameplay-1.0.0",
+      "LostKode-Ragnavik_Gameplay-1.0.1",
       "Marlthon-AirAnimals-0.3.1",
       "Marlthon-OdinMounts-0.1.5",
       "Marlthon-OdinShip-0.8.1",
@@ -484,10 +484,10 @@
       "OdinPlus-GoodestBoy-0.3.7",
       "OdinPlus-HedgeWalls-1.0.16",
       "OdinPlus-OdinArchitect-1.7.5",
-      "OdinPlus-OdinBanners-1.1.12",
+      "OdinPlus-OdinBanners-1.1.14",
       "OdinPlus-OdinBear-1.4.9",
       "OdinPlus-OdinCampsite-1.6.5",
-      "OdinPlus-OdinHorse-1.7.2",
+      "OdinPlus-OdinHorse-1.7.3",
       "OdinPlus-OdinsFoodBarrels-1.2.9",
       "OdinPlus-OdinsHorsePen-1.1.2",
       "OdinPlus-OdinsKingdom-1.6.1",
@@ -550,7 +550,7 @@
       "denikson-BepInExPack_Valheim-5.4.2350",
       "shudnal-MoreGatesExtended-1.0.5",
       "sighsorry-Dive_In-1.2.3",
-      "turbero-KillMeForMyPower-2.4.0"
+      "turbero-KillMeForMyPower-2.5.0"
     ]
   }
 }

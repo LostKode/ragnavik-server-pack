@@ -2,6 +2,7 @@
 
 | Version | Changes |
 | --- | --- |
+| 1.1.20 | Require Ragnavik Shared 1.0.2 so the server loads Ragnavik Compatibility 1.0.6 for the current MagicPlugin and EpicMMO compatibility fixes. |
 | 1.1.19 | Depend on Ragnavik Shared for synchronized gameplay mods and test DedicatedServer 1.0.3 for server-owned world simulation. Retain Network and Server Bridge as dedicated-server-only dependencies so they no longer execute on player clients. |
 | 1.1.18 | Move OdinBear Black Bear spawns from the Meadows to the Black Forest and keep Wild Spirit Necks away from Black Forest biome edges so the starting biome remains safe for early progression. |
 | 1.1.17 | Disable World Advancement Progression equipment locking so starter and normally acquired equipment, including the Wooden Mace, can be used immediately while personal boss, raid, and spawn progression remain enabled. |

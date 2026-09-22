@@ -134,6 +134,7 @@
     ],
     "added_files": [
       "config/Azumatt.MaxPlayerCount.cfg",
+      "config/Azumatt.WardIsLove.cfg",
       "config/Azumatt_and_ValheimPlusDevs.PerfectPlacement.cfg",
       "config/GraveBear.BottledNeck.cfg",
       "config/Raelaziel.OdinBear.cfg",
@@ -312,6 +313,7 @@
     "plugin_files": [],
     "server_config_files": [
       "config/Azumatt.Recycle_N_Reclaim.cfg",
+      "config/Azumatt.WardIsLove.cfg",
       "config/CatosAntiCheat_AdminWhitelist.txt",
       "config/CatosAntiCheat_ExtraWhitelist.txt",
       "config/CatosAntiCheat_ServerOnly.txt",

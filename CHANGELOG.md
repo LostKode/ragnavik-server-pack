@@ -2,6 +2,7 @@
 
 | Version | Changes |
 | --- | --- |
+| 1.1.28 | Require Ragnavik Shared 1.0.10 with Gameplay 1.0.2 to restore starter chest interaction and current Valheim API compatibility. |
 | 1.1.27 | Require Ragnavik Shared 1.0.9 with Valheim Performance Profiler 0.1.0. Regenerate inventories and anti-cheat policy against Client Pack 1.1.43. |
 | 1.1.26 | Require Ragnavik Shared 1.0.8 with Jotunn 2.30.2 and EpicLoot 0.14.11. Regenerate inventories and anti-cheat policy against Client Pack 1.1.42. |
 | 1.1.25 | Require Ragnavik Shared 1.0.7 with Gameplay 1.0.1, Jotunn 2.30.2, OdinBanners 1.1.14, OdinHorse 1.7.3, and KillMeForMyPower 2.5.0. Update Server Bridge to 1.0.6 and regenerate inventories and anti-cheat policy against Client Pack 1.1.41. |

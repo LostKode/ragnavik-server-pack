@@ -2,6 +2,22 @@
 
 This runbook is a gate, not authorization. Never use it to modify or restart production without explicit approval.
 
+## Build the locked deployment tree
+
+Run `python3 scripts/build_deployment.py`. The builder recursively resolves the
+exact dependency graph from Hexium first, with Thunderstore used only when the
+exact package version is unavailable on Hexium. It records every selected
+source, immutable download URL, archive SHA-256, and dependency edge in
+`deployment-lock.json`.
+
+The build fails when an exact version is unavailable. Never substitute a newer
+or older version during deployment. Change and release the owning package
+manifest through the normal review process instead.
+
+The generated `bepinex` directory is the complete proposed source tree. Treat
+it as an immutable deployment artifact. Production must not resolve packages
+or select latest versions during a restart.
+
 ## Prepare the effective manifests
 
 1. Record the exact client-pack and server-pack manifests intended for the deployment.

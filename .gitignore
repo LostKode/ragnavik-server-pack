@@ -1,4 +1,5 @@
 dist/
+.cache/
 *.zip
 __pycache__/
 *.pyc

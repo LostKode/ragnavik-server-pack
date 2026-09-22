@@ -4,8 +4,8 @@
   "website_url": "https://ragnavik.vercel.app",
   "description": "Authoritative gameplay and synchronized configuration pack for the Ragnavik Valheim server.",
   "dependencies": [
-    "LostKode-Ragnavik_Shared-1.0.15",
+    "LostKode-Ragnavik_Shared-1.0.16",
     "Smoothbrain-Network-1.1.1",
-    "LostKode-Ragnavik_Server_Bridge-1.0.8"
+    "LostKode-Ragnavik_Server_Bridge-1.0.9"
   ]
 }

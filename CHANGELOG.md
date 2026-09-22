@@ -2,6 +2,7 @@
 
 | Version | Changes |
 | --- | --- |
+| 1.1.30 | Make the WardIsLove replacement ward available earlier by using the vanilla ward recipe of 5 Fine Wood, 5 Greydwarf Eyes, and 1 Surtling Core at a Workbench. |
 | 1.1.29 | Require Ragnavik Shared 1.0.13 with Compatibility 1.0.8, the current performance profiler, seed bag configuration, and the available Startup Accelerator 1.0.3 release. Update Server Bridge to 1.0.7 for maintenance countdown messages. |
 | 1.1.28 | Require Ragnavik Shared 1.0.10 with Gameplay 1.0.2 to restore starter chest interaction and current Valheim API compatibility. |
 | 1.1.27 | Require Ragnavik Shared 1.0.9 with Valheim Performance Profiler 0.1.0. Regenerate inventories and anti-cheat policy against Client Pack 1.1.43. |

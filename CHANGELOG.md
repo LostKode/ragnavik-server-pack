@@ -2,6 +2,7 @@
 
 | Version | Changes |
 | --- | --- |
+| 1.1.34 | Require Ragnavik Shared 1.0.20 with Compatibility 1.0.12 so ItemDrawers preserves cooked food, magic reagents, upgrades, and other custom item data during automatic storage and pickup. Regenerate inventories and anti-cheat policy against Client Pack 1.1.52. |
 | 1.1.33 | Require Ragnavik Shared 1.0.18 with Compatibility 1.0.11 for permitted spirit doors, assigned-bed resurrection, and AzuEPI quick-slot restoration. Regenerate inventories and anti-cheat policy against Client Pack 1.1.50. |
 | 1.1.32 | Require Ragnavik Shared 1.0.17 so TargetPortal allows ores, metals, and other normally restricted items through portals. Regenerate inventories and anti-cheat policy against Client Pack 1.1.48. |
 | 1.1.31 | Require Ragnavik Shared 1.0.16 with WardIsLove 4.0.4, Warfare 1.9.4, Zen ModLib 1.14.9, ZenRaids 1.2.2, Resurrection 1.0.15, Gameplay 1.0.4, and Compatibility 1.0.9. Update Server Bridge to 1.0.9 for live EpicMMO player levels and restored maintenance countdown messages. Regenerate inventories and anti-cheat policy against Client Pack 1.1.47. |

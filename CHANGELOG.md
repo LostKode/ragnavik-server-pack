@@ -2,6 +2,7 @@
 
 | Version | Changes |
 | --- | --- |
+| 1.1.38 | Require Compatibility 1.0.16 through Shared 1.0.24 to activate farming XP on the current game. |
 | 1.1.37 | Require Ragnavik Shared 1.0.23. Disable LazyVikings beehive automation so honey remains in hives for manual collection. Restore base EpicMMO experience from harvesting and other configured noncombat activities. Include Compatibility 1.0.15 farming XP fixes, preserve unlearned profession levels, and moderate crop bonuses.  Update 16 shared dependencies; align with AAABuildMenu 1.0.6 and PlantEasily 2.2.2.  Include UI 1.2.15 with corrected farming and profession guidance. |
 | 1.1.36 | Require Ragnavik Shared 1.0.22 with Compatibility 1.0.14 to restore hover prompts and interactions. Align inventories with Client 1.1.54. |
 | 1.1.35 | Require Ragnavik Shared 1.0.21 and align the server with Client 1.1.53, Compatibility 1.0.13, EpicLoot 0.14.12, OdinsFoodBarrels 1.3.1, Venture Location Reset 1.1.0, and TargetPortal 1.2.7. |

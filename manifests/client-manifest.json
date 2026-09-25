@@ -1,11 +1,11 @@
 {
   "name": "Ragnavik",
-  "version_number": "1.1.56",
+  "version_number": "1.1.57",
   "website_url": "https://ragnavik.vercel.app",
   "description": "Ragnavik is currently in private testing. Public access is not open yet.",
   "dependencies": [
-    "LostKode-Ragnavik_Shared-1.0.24",
-    "LostKode-Ragnavik_UI-1.2.15",
+    "LostKode-Ragnavik_Shared-1.0.25",
+    "LostKode-Ragnavik_UI-1.2.16",
     "Advize-PlantEasily-2.2.2",
     "ComfyMods-Chatter-2.13.0",
     "Azumatt-AAA_Crafting-2.1.10",

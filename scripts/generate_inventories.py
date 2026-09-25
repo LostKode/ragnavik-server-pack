@@ -50,15 +50,21 @@ APPROVED_REMOVED_FILES = {
 
 
 SHARED_CONFIG_FILES = {
-    "config/blacks7ar.LazyVikings.cfg",
+    "config/Azumatt.AzuAutoStore.cfg",
     "config/Azumatt.MaxPlayerCount.cfg",
     "config/Azumatt.SleepSkip.cfg",
+    "config/Azumatt.WardIsLove.cfg",
     "config/Azumatt_and_ValheimPlusDevs.PerfectPlacement.cfg",
+    "config/ZenDragon.ZenRaids.cfg",
+    "config/blacks7ar.Explorer.cfg",
+    "config/blacks7ar.LazyVikings.cfg",
     "config/blacks7ar.LootParticlePlus.cfg",
+    "config/gravebear.odinsfoodbarrels.cfg",
     "config/neobotics.valheim_mod.seidrchest.cfg",
     "config/org.bepinex.plugins.farming.cfg",
     "config/org.bepinex.plugins.passivepowers.cfg",
     "config/org.bepinex.plugins.professions.cfg",
+    "config/org.bepinex.plugins.targetportal.cfg",
     "config/randyknapp.mods.epicloot.cfg",
     "config/xyz.alcan.comfortcalc.cfg",
 }

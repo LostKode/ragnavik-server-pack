@@ -1,12 +1,12 @@
 {
   "name": "Ragnavik_Shared",
-  "version_number": "1.0.23",
+  "version_number": "1.0.24",
   "website_url": "https://ragnavik.vercel.app",
   "description": "Shared gameplay dependencies and synchronized configuration for Ragnavik clients and servers.",
   "dependencies": [
     "LostKode-Ragnavik_Gameplay-1.0.4",
     "LostKode-Valheim_Performance_Profiler-0.1.0",
-    "LostKode-Ragnavik_Compatibility-1.0.15",
+    "LostKode-Ragnavik_Compatibility-1.0.16",
     "denikson-BepInExPack_Valheim-5.4.2351",
     "Advize-PlantEverything-1.21.3",
     "catosaurluna-CatosAntiCheat-1.0.4",

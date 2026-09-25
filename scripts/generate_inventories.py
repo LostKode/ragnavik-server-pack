@@ -50,6 +50,7 @@ APPROVED_REMOVED_FILES = {
 
 
 SHARED_CONFIG_FILES = {
+    "config/blacks7ar.LazyVikings.cfg",
     "config/Azumatt.MaxPlayerCount.cfg",
     "config/Azumatt.SleepSkip.cfg",
     "config/Azumatt_and_ValheimPlusDevs.PerfectPlacement.cfg",

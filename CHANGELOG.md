@@ -2,6 +2,7 @@
 
 | Version | Changes |
 | --- | --- |
+| 1.1.37 | Require Ragnavik Shared 1.0.23. Disable LazyVikings beehive automation so honey remains in hives for manual collection. |
 | 1.1.36 | Require Ragnavik Shared 1.0.22 with Compatibility 1.0.14 to restore hover prompts and interactions. Align inventories with Client 1.1.54. |
 | 1.1.35 | Require Ragnavik Shared 1.0.21 and align the server with Client 1.1.53, Compatibility 1.0.13, EpicLoot 0.14.12, OdinsFoodBarrels 1.3.1, Venture Location Reset 1.1.0, and TargetPortal 1.2.7. |
 | 1.1.34 | Require Ragnavik Shared 1.0.20 with Compatibility 1.0.12 so ItemDrawers preserves cooked food, magic reagents, upgrades, and other custom item data during automatic storage and pickup. Regenerate inventories and anti-cheat policy against Client Pack 1.1.52. |

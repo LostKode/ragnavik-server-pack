@@ -14,6 +14,7 @@ from pathlib import Path
 sys.dont_write_bytecode = True
 
 from build_package import build, package_files
+from validate_recipe_costs import validate_recipe_costs
 
 ROOT = Path(__file__).resolve().parents[1]
 FORBIDDEN_PARTS = {"node_modules", "bin", "obj", "__pycache__", ".git"}
@@ -53,6 +54,7 @@ def main() -> int:
             [sys.executable, str(ROOT / "scripts/generate_inventories.py"), "--check"],
             check=True,
         )
+        validate_recipe_costs(ROOT / "config/Therzie.Warfare.cfg")
         dlls = [path for path in package_files() if path.suffix.lower() == ".dll"]
         dll_names = [path.name.lower() for path in dlls]
         if len(dll_names) != len(set(dll_names)):

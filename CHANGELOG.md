@@ -2,6 +2,7 @@
 
 | Version | Changes |
 | --- | --- |
+| 1.1.40 | Require Shared 1.0.26 with Compatibility 1.0.17. Add 60 missing EpicMMO creature mappings, including level-8 Meadows skeletons and level-15 wild Black Forest roots. Match later-biome and sleeping variants to existing progression; summoned companions and offspring grant no kill XP. |
 | 1.1.39 | Unselected professions earn 50% skill XP; selected professions earn 100%. Keep normal maximum levels and unchanged character XP. Update profession guidance. |
 | 1.1.38 | Require Compatibility 1.0.16 through Shared 1.0.24 to activate farming XP on the current game. |
 | 1.1.37 | Require Ragnavik Shared 1.0.23. Disable LazyVikings beehive automation so honey remains in hives for manual collection. Restore base EpicMMO experience from harvesting and other configured noncombat activities. Include Compatibility 1.0.15 farming XP fixes, preserve unlearned profession levels, and moderate crop bonuses.  Update 16 shared dependencies; align with AAABuildMenu 1.0.6 and PlantEasily 2.2.2.  Include UI 1.2.15 with corrected farming and profession guidance. |

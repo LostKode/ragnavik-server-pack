@@ -1,6 +1,6 @@
 {
   "name": "Ragnavik_Shared",
-  "version_number": "1.0.27",
+  "version_number": "1.0.28",
   "website_url": "https://ragnavik.vercel.app",
   "description": "Shared gameplay dependencies and synchronized configuration for Ragnavik clients and servers.",
   "dependencies": [
@@ -17,6 +17,7 @@
     "VentureValheim-Venture_Location_Reset-1.1.0",
     "VentureValheim-World_Advancement_Progression-1.0.0",
     "VentureValheim-Warm_Torches-1.0.0",
+    "Xenofell-TorchesEternal-0.2.0",
     "Azumatt-AzuAutoStore-3.1.6",
     "Azumatt-AzuCraftyBoxes-1.8.24",
     "Azumatt-AzuExtendedPlayerInventory-2.5.1",

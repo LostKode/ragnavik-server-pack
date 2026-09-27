@@ -340,7 +340,7 @@
       "config/org.bepinex.plugins.resurrection.cfg"
     ],
     "server_dependencies": [
-      "LostKode-Ragnavik_Server_Bridge-1.0.10",
+      "LostKode-Ragnavik_Server_Bridge-1.0.11",
       "LostKode-Ragnavik_Shared-1.0.30",
       "Smoothbrain-Network-1.1.1"
     ],
@@ -369,7 +369,7 @@
       "KG-ItemDrawers-1.4.0",
       "LostKode-Ragnavik_Compatibility-1.0.23",
       "LostKode-Ragnavik_Gameplay-1.0.5",
-      "LostKode-Ragnavik_Server_Bridge-1.0.10",
+      "LostKode-Ragnavik_Server_Bridge-1.0.11",
       "LostKode-Valheim_Performance_Profiler-0.1.0",
       "Marlthon-AirAnimals-0.3.1",
       "Marlthon-OdinMounts-0.1.5",

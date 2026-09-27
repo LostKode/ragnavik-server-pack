@@ -2,6 +2,7 @@
 
 | Version | Changes |
 | --- | --- |
+| 1.1.46 | Require Server Bridge 1.0.11 for verified dedicated world-save requests. Retain peer-based maintenance messages; shared and client dependencies are unchanged. |
 | 1.1.45 | Require Server Bridge 1.0.10 for peer-based maintenance notices in chat and at screen center. Shared dependencies and Client Pack remain unchanged. |
 | 1.1.44 | Require Shared 1.0.30. Include Compatibility 1.0.23: retain spirit recovery, quick-slot grave recovery, and the EpicMMO reload guard with the updated mods. Include pouch trading, backpack-key, and drawer-fed smelter fixes. |
 | 1.1.43 | Require Shared 1.0.29 with the 13 requested shared mod updates, including an explicit Server Devcommands 1.115.0 pin. Align inventories with Client 1.1.61 and Unshamed 1.0.8. |

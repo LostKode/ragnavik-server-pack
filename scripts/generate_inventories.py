@@ -51,6 +51,7 @@ APPROVED_REMOVED_FILES = {
 
 SHARED_CONFIG_FILES = {
     "config/Azumatt.AzuAutoStore.cfg",
+    "config/Azumatt.AzuCraftyBoxes.cfg",
     "config/Azumatt.MaxPlayerCount.cfg",
     "config/Azumatt.SleepSkip.cfg",
     "config/Azumatt.WardIsLove.cfg",

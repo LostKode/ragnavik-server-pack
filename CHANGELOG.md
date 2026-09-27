@@ -2,6 +2,7 @@
 
 | Version | Changes |
 | --- | --- |
+| 1.1.43 | Require Shared 1.0.29 with the 13 requested shared mod updates, including an explicit Server Devcommands 1.115.0 pin. Align inventories with Client 1.1.61 and Unshamed 1.0.8. |
 | 1.1.42 | Require Shared 1.0.28. Restore permanently fueled torches and fires, increase manual auto-store range to 20 meters, and move the CraftyBoxes container toggle to `Alt+C` so ItemDrawers keeps `Shift+E` for deposit all. Restore the material costs for Buckshot, Cranium Basher, Doombringer, Heartrender, Hunger, Skullcrusher, Skystrike, and Viper. |
 | 1.1.41 | Require Shared 1.0.27. Include Compatibility 1.0.19 for Foraging XP from full and partial collectors, cart-sign fixes, and expanded creature levels. Retain Gameplay 1.0.5: selected professions earn 100% skill XP and unselected professions earn 50%. Update AzuCraftyBoxes to 1.8.24 and FirstPersonMode to 1.4.4. |
 | 1.1.40 | Require Shared 1.0.26 with Compatibility 1.0.17. Add 60 missing EpicMMO creature mappings, including level-8 Meadows skeletons and level-15 wild Black Forest roots. Match later-biome and sleeping variants to existing progression; summoned companions and offspring grant no kill XP. |

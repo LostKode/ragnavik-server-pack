@@ -2,6 +2,7 @@
 
 | Version | Changes |
 | --- | --- |
+| 1.1.45 | Require Server Bridge 1.0.10 for peer-based maintenance notices in chat and at screen center. Shared dependencies and Client Pack remain unchanged. |
 | 1.1.44 | Require Shared 1.0.30. Include Compatibility 1.0.23: retain spirit recovery, quick-slot grave recovery, and the EpicMMO reload guard with the updated mods. Include pouch trading, backpack-key, and drawer-fed smelter fixes. |
 | 1.1.43 | Require Shared 1.0.29 with the 13 requested shared mod updates, including an explicit Server Devcommands 1.115.0 pin. Align inventories with Client 1.1.61 and Unshamed 1.0.8. |
 | 1.1.42 | Require Shared 1.0.28. Restore permanently fueled torches and fires, increase manual auto-store range to 20 meters, and move the CraftyBoxes container toggle to `Alt+C` so ItemDrawers keeps `Shift+E` for deposit all. Restore the material costs for Buckshot, Cranium Basher, Doombringer, Heartrender, Hunger, Skullcrusher, Skystrike, and Viper. |
